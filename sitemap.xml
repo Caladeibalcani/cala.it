@@ -2583,6 +2583,32 @@
   <url><loc>https://caladeibalcani.it/de/kontakt.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://caladeibalcani.it/de/faq.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
+  <!-- ══ BLOG ARTICOLI (IT) — Batch 4 ══ -->
+  <url>
+    <loc>https://caladeibalcani.it/blog/matrimonio-puglia-luna-piena-mare.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-puglia-luna-piena-mare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-puglia-luna-piena-mare.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/blog/matrimonio-dinamico-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-dinamico-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-dinamico-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/blog/bomboniere-matrimonio-senatore-cappelli-terracotta.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/bomboniere-matrimonio-senatore-cappelli-terracotta.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/bomboniere-matrimonio-senatore-cappelli-terracotta.html"/>
+  </url>
+
   <!-- ══ BLOG ARTICOLI (IT) — Batch 3 ══ -->
   <url>
     <loc>https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html</loc>
