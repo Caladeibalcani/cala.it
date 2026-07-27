@@ -2583,6 +2583,32 @@
   <url><loc>https://caladeibalcani.it/de/kontakt.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://caladeibalcani.it/de/faq.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
+  <!-- ══ BLOG ARTICOLI (IT) — Batch 3 ══ -->
+  <url>
+    <loc>https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/blog/matrimonio-pochi-invitati-semplicita.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-pochi-invitati-semplicita.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-pochi-invitati-semplicita.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+  </url>
+
   <!-- ══ BLOG ARTICOLI (IT) — Batch 2 ══ -->
   <url>
     <loc>https://caladeibalcani.it/blog/magia-santa-cesarea-terme-matrimonio.html</loc>
