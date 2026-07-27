@@ -145,7 +145,8 @@
         <p>Francesco Urso ou un membre de notre équipe vous répondra personnellement dans les 24 heures avec une première réponse sur les disponibilités et les possibilités pour votre projet.</p>
 
         <!-- Formulaire de contact -->
-        <form action="#" method="POST" novalidate style="margin-top: 2rem;" aria-label="Formulaire de contact" name="contact-fr" data-netlify="true" data-netlify-recaptcha="true">
+        <form action="#" method="POST" novalidate style="margin-top: 2rem;" aria-label="Formulaire de contact" name="contact-fr" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+        <input name="bot-field" type="text" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:0;height:0;overflow:hidden" aria-hidden="true">
         <input type="hidden" name="form-name" value="contact-fr">
           <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
             <div>

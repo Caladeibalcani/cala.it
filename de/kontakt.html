@@ -143,7 +143,8 @@
           <div class="divider divider--left"></div>
           <p style="margin-bottom:2.5rem">Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen. Gerne stehen wir auch für eine Videoberatung zur Verfügung, wenn Sie sich Cala dei Balcani von zu Hause aus ansehen möchten.</p>
 
-          <form action="#" method="POST" novalidate aria-label="Hochzeitsanfrageformular" style="display:grid;gap:1.5rem" name="kontakt-de" data-netlify="true" data-netlify-recaptcha="true">
+          <form action="#" method="POST" novalidate aria-label="Hochzeitsanfrageformular" style="display:grid;gap:1.5rem" name="kontakt-de" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+              <input name="bot-field" type="text" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:0;height:0;overflow:hidden" aria-hidden="true">
               <input type="hidden" name="form-name" value="kontakt-de">
             <div class="grid-2" style="gap:1.5rem">
               <div class="form-group">
