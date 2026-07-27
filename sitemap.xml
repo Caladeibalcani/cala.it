@@ -2583,4 +2583,30 @@
   <url><loc>https://caladeibalcani.it/de/kontakt.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://caladeibalcani.it/de/faq.html</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
+  <!-- ══ BLOG ARTICOLI (IT) — Batch 1 ══ -->
+  <url>
+    <loc>https://caladeibalcani.it/blog/wedding-planner-serve-davvero.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/wedding-planner-serve-davvero.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/wedding-planner-serve-davvero.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/blog/location-mare-o-spiaggia.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/location-mare-o-spiaggia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/location-mare-o-spiaggia.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/blog/matrimonio-da-favola-italian-chic.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-da-favola-italian-chic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-da-favola-italian-chic.html"/>
+  </url>
+
 </urlset>
