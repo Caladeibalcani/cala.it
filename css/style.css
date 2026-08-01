@@ -277,7 +277,7 @@ p  { color: var(--text-mid); line-height: 1.85; }
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
-  padding: 160px 24px 80px;
+  padding: 110px 24px 50px;
   background-image: image-set(url("../img/cala-dei-balcani-location-matrimoni-wedding-salento-santa-cesarea-terme-lecce-7-scaled.webp") type("image/webp"),url("../img/cala-dei-balcani-location-matrimoni-wedding-salento-santa-cesarea-terme-lecce-7-scaled.jpg") type("image/jpeg")), linear-gradient(rgba(7,15,30,.7), rgba(7,15,30,.7));
   background-size: cover;
   background-position: center;
@@ -295,7 +295,7 @@ p  { color: var(--text-mid); line-height: 1.85; }
 /* ── INTRO BLOCK ── */
 .intro {
   max-width: 800px; margin: 0 auto;
-  padding: 72px 24px; text-align: center;
+  padding: 40px 24px; text-align: center;
 }
 
 /* ── FEATURE STRIP ── */
@@ -538,7 +538,7 @@ details.faq-item .faq-answer { max-height: none; overflow: visible; padding-bott
 /* ── BREADCRUMB ── */
 .breadcrumb {
   padding: 14px 0; font-size: .78rem; color: var(--text-light);
-  border-bottom: 1px solid var(--border); margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border); margin-bottom: 1rem;
 }
 .breadcrumb a { color: var(--gold); }
 .breadcrumb a:hover { text-decoration: underline; }
