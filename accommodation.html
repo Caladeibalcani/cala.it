@@ -274,17 +274,13 @@
             <input name="bot-field" type="text" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:0;height:0;overflow:hidden" aria-hidden="true">
         <div class="form-row">
           <div class="form-group">
-            <label for="a-nome">Nome *</label>
-            <input type="text" id="a-nome" name="nome" placeholder="Il vostro nome" required autocomplete="given-name">
+            <label for="a-data">Data presuntiva del Matrimonio</label>
+            <input type="date" id="a-data" name="data">
           </div>
           <div class="form-group">
-            <label for="a-email">Email *</label>
-            <input type="email" id="a-email" name="email" placeholder="la-vostra@email.com" required autocomplete="email">
+            <label for="a-ospiti">Numero di Ospiti</label>
+            <input type="number" id="a-ospiti" name="ospiti" placeholder="Es: 100" min="1" max="300">
           </div>
-        </div>
-        <div class="form-group">
-          <label for="a-messaggio">Messaggio</label>
-          <textarea id="a-messaggio" name="messaggio" placeholder="Quanti ospiti e quando è previsto il matrimonio?" style="height:120px"></textarea>
         </div>
         <div style="text-align:center;margin-top:1.5rem">
           <button type="submit" class="btn btn--gold" style="padding:14px 40px;font-size:.95rem">Richiedi Informazioni</button>
