@@ -541,6 +541,8 @@ details.faq-item .faq-answer { max-height: none; overflow: visible; padding-bott
   padding: 14px 0; font-size: .78rem; color: var(--text-light);
   border-bottom: 1px solid var(--border); margin-bottom: 0;
 }
+/* Prima sezione subito dopo il breadcrumb: padding-top minimo */
+nav[aria-label="Breadcrumb"] + section { padding-top: 16px; }
 .breadcrumb a { color: var(--gold); }
 .breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb span { margin: 0 8px; opacity: .5; }
