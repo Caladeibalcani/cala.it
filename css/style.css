@@ -22,7 +22,7 @@
   --font-italic: 'Cormorant Garamond', Georgia, serif;
   --font-body:   'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   --max-w:       1320px;
-  --pad-section: 72px 24px;
+  --pad-section: 56px 24px;
   --shadow:      0 4px 24px rgba(12,26,46,.08);
   --shadow-lg:   0 8px 48px rgba(12,26,46,.14);
   --tr:          .3s ease;
@@ -653,7 +653,7 @@ footer h5 {
   .nav__menu--secondary a { font-size: .78rem; }
 }
 @media (max-width: 820px) {
-  :root { --pad-section: 48px 20px; }
+  :root { --pad-section: 36px 20px; }
   .page-hero  { padding: 110px 24px 60px; min-height: 0; }
   .grid-2     { grid-template-columns: 1fr; gap: 40px; }
   .grid-3     { grid-template-columns: 1fr; }
