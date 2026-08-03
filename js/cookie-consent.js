@@ -34,7 +34,9 @@
     '#cdb-necessary:hover{background:rgba(200,208,220,.08)}' +
     '#cdb-mini{position:fixed;bottom:24px;left:24px;z-index:99997;background:#0c1a2e;color:#c9a84c;border:none;border-radius:24px;padding:8px 16px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.35);transition:background .2s,opacity .3s;font-family:inherit}' +
     '#cdb-mini:hover{background:#152440}' +
-    '@media(max-width:520px){#cdb-mini{bottom:16px;left:16px}}';
+    '@media(max-width:520px){#cdb-mini{display:none}' +
+    '#cdb-cookie-banner{top:12px;bottom:auto;right:12px;left:12px;max-width:none;width:auto;transform:translateY(-8px)}' +
+    '#cdb-cookie-banner.cdb-show{transform:translateY(0)}}';
   document.head.appendChild(s);
 
   function createMini() {

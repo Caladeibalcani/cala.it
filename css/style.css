@@ -1010,11 +1010,11 @@ footer h5 {
 .fcw {
   position: fixed;
   bottom: 24px;
-  left: 24px;
+  right: 24px;
   z-index: 9999;
   display: flex;
   flex-direction: column-reverse;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 10px;
 }
 .fcw__toggle {
@@ -1094,7 +1094,7 @@ footer h5 {
 }
 .fcw__btn:hover .fcw__label { opacity: 1; }
 @media (max-width: 520px) {
-  .fcw { bottom: 16px; left: 16px; }
+  .fcw { bottom: 8px; right: 12px; }
   .fcw__toggle { height: 40px; padding: 0 14px 0 11px; gap: 6px; }
   .fcw__toggle-label { font-size: .65rem; }
   .fcw__btn { width: 42px; height: 42px; }
