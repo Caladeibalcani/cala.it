@@ -277,7 +277,8 @@ p  { color: var(--text-mid); line-height: 1.85; }
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
-  padding: 110px 24px 50px;
+  padding: 150px 24px 80px;
+  min-height: 460px;
   background-image: image-set(url("../img/cala-dei-balcani-location-matrimoni-wedding-salento-santa-cesarea-terme-lecce-7-scaled.webp") type("image/webp"),url("../img/cala-dei-balcani-location-matrimoni-wedding-salento-santa-cesarea-terme-lecce-7-scaled.jpg") type("image/jpeg")), linear-gradient(rgba(7,15,30,.7), rgba(7,15,30,.7));
   background-size: cover;
   background-position: center;
@@ -653,6 +654,7 @@ footer h5 {
 }
 @media (max-width: 820px) {
   :root { --pad-section: 64px 20px; }
+  .page-hero  { padding: 110px 24px 60px; min-height: 0; }
   .grid-2     { grid-template-columns: 1fr; gap: 40px; }
   .grid-3     { grid-template-columns: 1fr; }
   .split      { grid-template-columns: 1fr; }
