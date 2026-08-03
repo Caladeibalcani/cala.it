@@ -673,6 +673,8 @@ footer h5 {
   .hero h1   { font-size: 2.1rem; }
   .hero__cta { flex-direction: column; }
   .btn       { justify-content: center; }
+  .testimonial { padding: 20px 18px; }
+  .testimonial .yt-facade { margin: -20px -18px 1rem !important; }
 }
 @media (max-width: 768px) {
   .video-testi-grid { grid-template-columns: 1fr !important; }
@@ -1095,7 +1097,8 @@ footer h5 {
 .fcw__btn:hover .fcw__label { opacity: 1; }
 @media (max-width: 520px) {
   .fcw { bottom: 8px; right: 12px; }
-  .fcw__toggle { height: 40px; padding: 0 14px 0 11px; gap: 6px; }
-  .fcw__toggle-label { font-size: .65rem; }
-  .fcw__btn { width: 42px; height: 42px; }
+  .fcw__toggle { height: 40px; width: 40px; border-radius: 50%; padding: 0; justify-content: center; gap: 0; }
+  .fcw__toggle-label { display: none; }
+  .fcw__btn { width: 40px; height: 40px; }
+  footer { padding-bottom: 56px; }
 }
