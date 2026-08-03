@@ -675,6 +675,7 @@ footer h5 {
   .btn       { justify-content: center; }
   .testimonial { padding: 20px 18px; }
   .testimonial .yt-facade { margin: -20px -18px 1rem !important; }
+  .grid-2 > div { text-align: center; }
 }
 @media (max-width: 768px) {
   .video-testi-grid { grid-template-columns: 1fr !important; }
