@@ -1101,4 +1101,6 @@ footer h5 {
   .fcw__toggle-label { display: none; }
   .fcw__btn { width: 40px; height: 40px; }
   footer { padding-bottom: 56px; }
+  .contact-item { gap: 12px; }
+  .contact-item__icon { width: 36px; height: 36px; font-size: .95rem; }
 }
