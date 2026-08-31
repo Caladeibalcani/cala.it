@@ -163,8 +163,9 @@ document.querySelectorAll('form[name]').forEach(form => {
     const required = form.querySelectorAll('[required]');
     let valid = true;
     required.forEach(el => {
-      el.style.borderColor = el.value.trim() ? '' : 'red';
-      if (!el.value.trim()) valid = false;
+      const filled = el.type === 'checkbox' ? el.checked : el.value.trim();
+      el.style.borderColor = filled ? '' : 'red';
+      if (!filled) valid = false;
     });
     if (!valid) return;
 
