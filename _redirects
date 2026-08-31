@@ -1,3 +1,7 @@
+# Protezione file interni (admin/dati): mai serviti al pubblico
+/data/*  /index.html  404!
+/netlify/*  /index.html  404!
+
 # Redirect 301: URL senza estensione -> pagina .html canonica
 # Consolida i duplicati 'pagina alternativa con tag canonical' in Search Console.
 # I redirect delle home per lingua (/en, /fr, ...) restano in netlify.toml.

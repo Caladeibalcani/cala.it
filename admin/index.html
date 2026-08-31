@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Pannello di Gestione — Cala dei Balcani</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<style>
+  :root { --navy:#0c1a2e; --gold:#c4a24a; --cream:#faf6ee; --border:#e3ddd0; --mid:#555; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--cream); color:#222; min-height:100vh; }
+  header { background:var(--navy); color:#fff; padding:14px 22px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  header h1 { font-size:1.05rem; font-weight:600; letter-spacing:.04em; }
+  header .sp { flex:1 }
+  .tag { color:var(--gold); font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; }
+  main { max-width:1080px; margin:0 auto; padding:26px 18px 80px; }
+  .card { background:#fff; border:1px solid var(--border); border-radius:8px; padding:24px; margin-bottom:20px; box-shadow:0 4px 18px rgba(12,26,46,.05); }
+  h2 { font-size:1.05rem; margin-bottom:14px; color:var(--navy); }
+  label { display:block; font-size:.8rem; font-weight:600; color:var(--mid); margin:12px 0 4px; letter-spacing:.03em; }
+  input[type=text], input[type=password], input[type=number], textarea, select {
+    width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:5px; font-size:.95rem; font-family:inherit; background:#fff; }
+  textarea { min-height:220px; line-height:1.6; }
+  button { background:var(--gold); color:#fff; border:none; border-radius:5px; padding:10px 20px; font-size:.9rem; font-weight:700; cursor:pointer; letter-spacing:.03em; }
+  button:hover { filter:brightness(1.06); }
+  button.ghost { background:#eee; color:#333; font-weight:600; }
+  button.mini { padding:4px 9px; font-size:.8rem; background:var(--navy); }
+  button.mini.rosso { background:#a33; }
+  button:disabled { opacity:.5; cursor:default; }
+  .msg { padding:11px 14px; border-radius:5px; margin:12px 0; font-size:.9rem; display:none; }
+  .msg.ok { background:#e9f5e9; color:#1e6b1e; display:block; }
+  .msg.err { background:#fdecea; color:#a33; display:block; }
+  .tabs { display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
+  .tabs button { background:#fff; color:var(--navy); border:1px solid var(--border); }
+  .tabs button.attiva { background:var(--navy); color:#fff; border-color:var(--navy); }
+  .foto-riga { display:flex; align-items:center; gap:10px; padding:8px; border:1px solid var(--border); border-radius:6px; margin-bottom:8px; background:#fff; }
+  .foto-riga img { width:84px; height:56px; object-fit:cover; border-radius:4px; flex-shrink:0; }
+  .foto-riga input[type=text] { flex:1; min-width:120px; }
+  .foto-riga select { width:auto; }
+  .cat-blocco { margin-bottom:26px; }
+  .cat-testa { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+  .cat-testa h3 { font-size:1rem; color:var(--navy); }
+  .cat-testa .conta { font-size:.78rem; color:var(--mid); }
+  .salva-bar { position:sticky; bottom:0; background:#fff; border-top:2px solid var(--gold); padding:12px 18px; display:none; align-items:center; gap:14px; z-index:50; margin:0 -18px; }
+  .salva-bar.attiva { display:flex; }
+  .hide { display:none !important; }
+  .nota { font-size:.8rem; color:var(--mid); margin-top:6px; line-height:1.5; }
+  .login-box { max-width:420px; margin:60px auto; }
+  .cap { display:flex; gap:10px; align-items:center; }
+  .cap input { width:90px; }
+  progress { width:100%; }
+</style>
+</head>
+<body>
+<header>
+  <span class="tag">Cala dei Balcani</span>
+  <h1>Pannello di Gestione</h1>
+  <span class="sp"></span>
+  <button id="btn-esci" class="ghost hide">Esci</button>
+</header>
+<main>
+
+  <!-- LOGIN -->
+  <div id="v-login" class="login-box card">
+    <h2>Accesso riservato</h2>
+    <div id="login-msg" class="msg"></div>
+    <label for="l-pass">Password amministratore</label>
+    <input type="password" id="l-pass" autocomplete="current-password">
+    <label>Verifica anti-robot</label>
+    <div class="cap">
+      <span id="cap-testo" style="font-weight:700">…</span>
+      <input type="number" id="cap-risposta" placeholder="?">
+      <button class="ghost" id="cap-nuovo" type="button" title="Nuova domanda">↻</button>
+    </div>
+    <div style="margin-top:18px"><button id="btn-login">Entra</button></div>
+  </div>
+
+  <!-- APP -->
+  <div id="v-app" class="hide">
+    <div class="tabs">
+      <button data-tab="gallerie" class="attiva">📷 Gallerie piatti</button>
+      <button data-tab="blog">✍️ Nuovo articolo</button>
+      <button data-tab="password">🔑 Password</button>
+    </div>
+    <div id="app-msg" class="msg"></div>
+
+    <!-- GALLERIE -->
+    <section id="tab-gallerie">
+      <div class="card">
+        <h2>Gallerie dell'Area Privata</h2>
+        <p class="nota">Sposta le foto con ↑ e ↓, cambiale di categoria col menu a tendina, eliminale con ✖, aggiungi foto nuove col pulsante di ogni categoria. Le didascalie compaiono quando la foto viene ingrandita. <strong>Ricordati di premere "Salva le modifiche" in fondo.</strong></p>
+      </div>
+      <div id="gallerie-corpo"></div>
+      <div class="salva-bar" id="salva-bar">
+        <strong>Modifiche non salvate</strong>
+        <span class="sp" style="flex:1"></span>
+        <button class="ghost" id="btn-annulla">Annulla</button>
+        <button id="btn-salva">💾 Salva le modifiche</button>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="tab-blog" class="hide">
+      <div class="card">
+        <h2>Pubblica un nuovo articolo</h2>
+        <label for="b-titolo">Titolo dell'articolo</label>
+        <input type="text" id="b-titolo" maxlength="120" placeholder="Es: Come scegliere la data perfetta per il matrimonio">
+        <label for="b-cat">Categoria</label>
+        <select id="b-cat">
+          <option>Ispirazione</option><option>Consigli</option><option>Storie Reali</option>
+          <option>Location &amp; Stile</option><option>Cucina</option><option>Territorio</option>
+        </select>
+        <label for="b-desc">Descrizione breve (40-165 caratteri — appare su Google e nella pagina Blog)</label>
+        <input type="text" id="b-desc" maxlength="165" placeholder="Riassunto dell'articolo in una frase o due">
+        <div class="nota"><span id="b-desc-conta">0</span>/165 caratteri</div>
+        <label for="b-cover">Foto di copertina</label>
+        <input type="file" id="b-cover" accept="image/*">
+        <label for="b-corpo">Testo dell'articolo</label>
+        <textarea id="b-corpo" placeholder="Scrivi qui il testo.
+
+Lascia una riga vuota tra un paragrafo e l'altro.
+
+## Le righe che iniziano con ## diventano sottotitoli"></textarea>
+        <div style="margin-top:16px"><button id="btn-pubblica">📤 Pubblica articolo</button></div>
+        <div class="nota" id="b-stato"></div>
+      </div>
+      <div class="card">
+        <h2>Articoli esistenti</h2>
+        <div id="blog-lista" class="nota">…</div>
+      </div>
+    </section>
+
+    <!-- PASSWORD -->
+    <section id="tab-password" class="hide">
+      <div class="card">
+        <h2>Cambia la password di accesso</h2>
+        <label for="p-vecchia">Password attuale</label>
+        <input type="password" id="p-vecchia" autocomplete="current-password">
+        <label for="p-nuova">Nuova password (minimo 10 caratteri)</label>
+        <input type="password" id="p-nuova" autocomplete="new-password">
+        <label for="p-nuova2">Ripeti la nuova password</label>
+        <input type="password" id="p-nuova2" autocomplete="new-password">
+        <div style="margin-top:16px"><button id="btn-password">Cambia password</button></div>
+        <p class="nota">Dopo il cambio dovrai rientrare con la password nuova. Conservala in un posto sicuro: senza, non si entra.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+(function () {
+  var API = '/.netlify/functions/admin';
+  var token = null, challenge = null, gallerie = null, sporco = false;
+
+  function $(id) { return document.getElementById(id); }
+  function msg(el, testo, tipo) { el.textContent = testo || ''; el.className = 'msg' + (testo ? ' ' + tipo : ''); }
+
+  async function api(action, dati, conAuth) {
+    var r = await fetch(API, {
+      method: 'POST',
+      headers: Object.assign({ 'Content-Type': 'application/json' },
+        conAuth && token ? { 'Authorization': 'Bearer ' + token } : {}),
+      body: JSON.stringify(Object.assign({ action: action }, dati || {})),
+    });
+    var j = await r.json().catch(function () { return { error: 'Risposta non valida' }; });
+    if (!r.ok) { if (j.challenge) impostaCaptcha(j.challenge); throw new Error(j.error || ('Errore ' + r.status)); }
+    return j;
+  }
+
+  // ── captcha ──
+  function impostaCaptcha(c) { challenge = c; $('cap-testo').textContent = 'Quanto fa ' + c.a + ' + ' + c.b + '?'; $('cap-risposta').value = ''; }
+  async function nuovoCaptcha() {
+    try { impostaCaptcha((await api('challenge')).challenge); }
+    catch (e) { msg($('login-msg'), e.message, 'err'); }
+  }
+  $('cap-nuovo').onclick = nuovoCaptcha;
+
+  // ── login ──
+  $('btn-login').onclick = async function () {
+    msg($('login-msg'), '');
+    try {
+      var r = await api('login', { password: $('l-pass').value, challenge: challenge, answer: $('cap-risposta').value });
+      token = r.token;
+      try { sessionStorage.setItem('cala-admin-token', token); } catch (e) {}
+      avvia();
+    } catch (e) { msg($('login-msg'), e.message, 'err'); }
+  };
+  $('l-pass').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('btn-login').click(); });
+  $('btn-esci').onclick = function () {
+    token = null; try { sessionStorage.removeItem('cala-admin-token'); } catch (e) {}
+    location.reload();
+  };
+
+  // ── avvio app ──
+  async function avvia() {
+    $('v-login').classList.add('hide');
+    $('v-app').classList.remove('hide');
+    $('btn-esci').classList.remove('hide');
+    try {
+      var d = await api('get_data', {}, true);
+      gallerie = d.gallerie;
+      disegnaGallerie();
+      $('blog-lista').innerHTML = (d.blog || []).map(function (n) {
+        return '<div>• <a href="/blog/' + n + '" target="_blank">' + n + '</a></div>';
+      }).join('') || 'Nessun articolo';
+    } catch (e) { msg($('app-msg'), e.message, 'err'); }
+  }
+
+  // ── tabs ──
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    b.onclick = function () {
+      document.querySelectorAll('.tabs button').forEach(function (x) { x.classList.remove('attiva'); });
+      b.classList.add('attiva');
+      ['gallerie', 'blog', 'password'].forEach(function (t) {
+        $('tab-' + t).classList.toggle('hide', t !== b.dataset.tab);
+      });
+    };
+  });
+
+  // ── gallerie ──
+  function segnaSporco() { sporco = true; $('salva-bar').classList.add('attiva'); }
+
+  function disegnaGallerie() {
+    var corpo = $('gallerie-corpo');
+    corpo.innerHTML = '';
+    gallerie.categorie.forEach(function (cat, ci) {
+      var box = document.createElement('div');
+      box.className = 'cat-blocco card';
+      var testa = document.createElement('div');
+      testa.className = 'cat-testa';
+      testa.innerHTML = '<h3>' + cat.nome + '</h3><span class="conta">' + cat.foto.length + ' foto</span><span style="flex:1"></span>';
+      var add = document.createElement('button');
+      add.className = 'mini'; add.textContent = '+ Aggiungi foto';
+      add.onclick = function () { aggiungiFoto(ci); };
+      testa.appendChild(add);
+      box.appendChild(testa);
+      cat.foto.forEach(function (f, fi) {
+        box.appendChild(rigaFoto(ci, fi, f));
+      });
+      corpo.appendChild(box);
+    });
+  }
+
+  function rigaFoto(ci, fi, f) {
+    var riga = document.createElement('div');
+    riga.className = 'foto-riga';
+    var img = document.createElement('img');
+    img.src = '/' + f.j; img.loading = 'lazy';
+    var cap = document.createElement('input');
+    cap.type = 'text'; cap.value = f.c || ''; cap.placeholder = 'Didascalia (facoltativa)'; cap.maxLength = 200;
+    cap.oninput = function () { f.c = cap.value; segnaSporco(); };
+    var sposta = document.createElement('select');
+    gallerie.categorie.forEach(function (c, i) {
+      var o = document.createElement('option');
+      o.value = i; o.textContent = c.nome; if (i === ci) o.selected = true;
+      sposta.appendChild(o);
+    });
+    sposta.onchange = function () {
+      var dest = Number(sposta.value);
+      gallerie.categorie[ci].foto.splice(fi, 1);
+      gallerie.categorie[dest].foto.push(f);
+      segnaSporco(); disegnaGallerie();
+    };
+    function btn(testo, cls, fn) { var b = document.createElement('button'); b.className = 'mini ' + (cls || ''); b.textContent = testo; b.onclick = fn; return b; }
+    var su = btn('↑', '', function () {
+      if (fi === 0) return;
+      var arr = gallerie.categorie[ci].foto;
+      arr.splice(fi - 1, 0, arr.splice(fi, 1)[0]);
+      segnaSporco(); disegnaGallerie();
+    });
+    var giu = btn('↓', '', function () {
+      var arr = gallerie.categorie[ci].foto;
+      if (fi >= arr.length - 1) return;
+      arr.splice(fi + 1, 0, arr.splice(fi, 1)[0]);
+      segnaSporco(); disegnaGallerie();
+    });
+    var del = btn('✖', 'rosso', function () {
+      if (!confirm('Eliminare questa foto dalla galleria?')) return;
+      gallerie.categorie[ci].foto.splice(fi, 1);
+      segnaSporco(); disegnaGallerie();
+    });
+    riga.append(img, cap, sposta, su, giu, del);
+    return riga;
+  }
+
+  // ridimensiona lato client e ritorna {jpgB64, webpB64}
+  function preparaImmagine(file) {
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var im = new Image();
+      im.onload = function () {
+        var max = 1600, w = im.width, h = im.height;
+        if (w > max || h > max) { var k = Math.min(max / w, max / h); w = Math.round(w * k); h = Math.round(h * k); }
+        var cv = document.createElement('canvas');
+        cv.width = w; cv.height = h;
+        cv.getContext('2d').drawImage(im, 0, 0, w, h);
+        function b64(tipo, q) {
+          return new Promise(function (res) {
+            cv.toBlob(function (blob) {
+              if (!blob) return res(null);
+              var fr = new FileReader();
+              fr.onload = function () { res(fr.result.split(',')[1]); };
+              fr.readAsDataURL(blob);
+            }, tipo, q);
+          });
+        }
+        Promise.all([b64('image/jpeg', 0.82), b64('image/webp', 0.8)]).then(function (r) {
+          URL.revokeObjectURL(url);
+          if (!r[0]) return reject(new Error('Immagine non leggibile'));
+          resolve({ jpg: r[0], webp: r[1] });
+        });
+      };
+      im.onerror = function () { reject(new Error('Immagine non leggibile')); };
+      im.src = url;
+    });
+  }
+
+  function aggiungiFoto(ci) {
+    var inp = document.createElement('input');
+    inp.type = 'file'; inp.accept = 'image/*'; inp.multiple = true;
+    inp.onchange = async function () {
+      msg($('app-msg'), 'Carico le foto…', 'ok');
+      try {
+        for (var i = 0; i < inp.files.length; i++) {
+          var f = inp.files[i];
+          var img = await preparaImmagine(f);
+          var r = await api('upload_image', { name: f.name.replace(/\.[^.]+$/, ''), jpg: img.jpg, webp: img.webp }, true);
+          gallerie.categorie[ci].foto.push({ w: r.w, j: r.j, c: '' });
+        }
+        segnaSporco(); disegnaGallerie();
+        msg($('app-msg'), 'Foto caricate. Ora premi "Salva le modifiche" per pubblicarle.', 'ok');
+      } catch (e) { msg($('app-msg'), e.message, 'err'); }
+    };
+    inp.click();
+  }
+
+  $('btn-salva').onclick = async function () {
+    $('btn-salva').disabled = true;
+    try {
+      var r = await api('save_gallery', { gallerie: gallerie }, true);
+      sporco = false; $('salva-bar').classList.remove('attiva');
+      msg($('app-msg'), r.note || 'Salvato.', 'ok');
+    } catch (e) { msg($('app-msg'), e.message, 'err'); }
+    $('btn-salva').disabled = false;
+  };
+  $('btn-annulla').onclick = async function () {
+    if (!confirm('Annullare tutte le modifiche non salvate?')) return;
+    var d = await api('get_data', {}, true);
+    gallerie = d.gallerie; sporco = false;
+    $('salva-bar').classList.remove('attiva');
+    disegnaGallerie();
+  };
+  window.addEventListener('beforeunload', function (e) { if (sporco) { e.preventDefault(); e.returnValue = ''; } });
+
+  // ── blog ──
+  $('b-desc').addEventListener('input', function () { $('b-desc-conta').textContent = $('b-desc').value.length; });
+  $('btn-pubblica').onclick = async function () {
+    var file = $('b-cover').files[0];
+    if (!file) return msg($('app-msg'), 'Scegli una foto di copertina', 'err');
+    $('btn-pubblica').disabled = true;
+    $('b-stato').textContent = 'Preparo le immagini…';
+    try {
+      var img = await preparaImmagine(file);
+      $('b-stato').textContent = 'Pubblico…';
+      var r = await api('save_post', {
+        titolo: $('b-titolo').value,
+        descrizione: $('b-desc').value,
+        categoria: $('b-cat').value,
+        corpo: $('b-corpo').value,
+        coverJpg: img.jpg, coverWebp: img.webp,
+      }, true);
+      msg($('app-msg'), (r.note || 'Pubblicato!') + ' → ' + r.url, 'ok');
+      $('b-stato').innerHTML = 'Pubblicato: <a href="' + r.url + '" target="_blank">' + r.url + '</a> (online tra 1-2 minuti)';
+      $('b-titolo').value = ''; $('b-desc').value = ''; $('b-corpo').value = ''; $('b-cover').value = '';
+    } catch (e) { msg($('app-msg'), e.message, 'err'); $('b-stato').textContent = ''; }
+    $('btn-pubblica').disabled = false;
+  };
+
+  // ── password ──
+  $('btn-password').onclick = async function () {
+    if ($('p-nuova').value !== $('p-nuova2').value) return msg($('app-msg'), 'Le due password nuove non coincidono', 'err');
+    $('btn-password').disabled = true;
+    try {
+      var r = await api('change_password', { oldPassword: $('p-vecchia').value, newPassword: $('p-nuova').value }, true);
+      msg($('app-msg'), r.note || 'Password cambiata.', 'ok');
+      $('p-vecchia').value = $('p-nuova').value = $('p-nuova2').value = '';
+    } catch (e) { msg($('app-msg'), e.message, 'err'); }
+    $('btn-password').disabled = false;
+  };
+
+  // ── init ──
+  (async function () {
+    try {
+      var salvato = sessionStorage.getItem('cala-admin-token');
+      if (salvato) {
+        token = salvato;
+        var ok = (await api('me', {}, true)).ok;
+        if (ok) return avvia();
+        token = null;
+      }
+    } catch (e) {}
+    nuovoCaptcha();
+  })();
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /admin/
+Disallow: /data/
+Disallow: /netlify/
 Allow: /
 Disallow: /.paperflow-runtime/
 
