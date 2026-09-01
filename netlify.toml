@@ -5,6 +5,12 @@
 [build]
   publish = "."
 
+# Netlify riscriveva i link interni togliendo .html (/azienda-agricola), ma i
+# nostri redirect 301 riportano quegli indirizzi alla pagina .html canonica:
+# ogni clic interno finiva cosi' per passare da un rimando inutile.
+[build.processing.html]
+  pretty_urls = false
+
 [build.environment]
   NODE_VERSION = "18"
 
