@@ -1,0 +1,122 @@
+name: Backup cifrato del sito
+
+# Si attiva: ogni lunedì mattina, a richiesta dal pannello /admin/
+# (che scrive data/backup-request.json) oppure a mano da questa pagina.
+on:
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/backup-request.json'
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il sito con tutta la cronologia
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Controlla se c'è qualcosa di nuovo
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          SHA=$(git rev-parse HEAD)
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          ULTIMO=$(gh release list --limit 1 --json tagName -q '.[0].tagName' 2>/dev/null || true)
+          SHA_VECCHIO=""
+          if [ -n "$ULTIMO" ]; then
+            SHA_VECCHIO=$(gh release view "$ULTIMO" --json body -q .body 2>/dev/null | grep -oE '[0-9a-f]{40}' | head -1 || true)
+          fi
+          # il backup a richiesta o manuale si fa sempre; quello settimanale solo se ci sono novità
+          if [ "$SHA" = "$SHA_VECCHIO" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Nessuna modifica dall'ultimo backup ($ULTIMO): salto."
+            echo "procedi=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "procedi=si" >> "$GITHUB_OUTPUT"
+            if [ -n "$SHA_VECCHIO" ]; then
+              echo "novita=$(git rev-list --count "$SHA_VECCHIO"..HEAD 2>/dev/null || echo '?')" >> "$GITHUB_OUTPUT"
+            else
+              echo "novita=primo backup" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Verifica che la password sia impostata
+        if: steps.check.outputs.procedi == 'si'
+        run: |
+          if [ -z "${{ secrets.BACKUP_PASSWORD }}" ]; then
+            echo "::error::Manca il segreto BACKUP_PASSWORD. Impostalo in Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Crea l'archivio cifrato
+        if: steps.check.outputs.procedi == 'si'
+        id: archivio
+        env:
+          PW: ${{ secrets.BACKUP_PASSWORD }}
+        run: |
+          set -e
+          DATA=$(date +%Y-%m-%d)
+          # un solo file con tutto: file attuali + cronologia completa delle modifiche
+          git bundle create sito.bundle --all
+          # 7-Zip con AES-256; -mhe=on nasconde anche i nomi dei file
+          7z a -t7z -mhe=on -p"$PW" "cala-backup-$DATA.7z" sito.bundle > /dev/null
+          rm sito.bundle
+          echo "file=cala-backup-$DATA.7z" >> "$GITHUB_OUTPUT"
+          echo "tag=backup-$DATA" >> "$GITHUB_OUTPUT"
+          echo "peso=$(du -h "cala-backup-$DATA.7z" | cut -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Pubblica il backup
+        if: steps.check.outputs.procedi == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          TAG="${{ steps.archivio.outputs.tag }}"
+          # se esiste già un backup con la stessa data lo sostituisce
+          gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$TAG" "${{ steps.archivio.outputs.file }}" \
+            --title "Backup del ${{ steps.archivio.outputs.tag }}" \
+            --notes "Backup cifrato del sito.
+          Peso: ${{ steps.archivio.outputs.peso }}
+          Modifiche incluse dall'ultimo backup: ${{ steps.check.outputs.novita }}
+          Commit: ${{ steps.check.outputs.sha }}
+
+          Per aprirlo: doppio clic sul file .7z e inserire la password dei backup.
+          Dentro c'è sito.bundle: si ripristina con \`git clone sito.bundle cala.it\`."
+
+      - name: Tieni solo gli ultimi 4 backup
+        if: steps.check.outputs.procedi == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release list --limit 100 --json tagName -q '.[].tagName' \
+            | grep '^backup-' | tail -n +5 \
+            | while read -r vecchio; do
+                echo "Elimino il backup vecchio: $vecchio"
+                gh release delete "$vecchio" --yes --cleanup-tag || true
+              done
+
+      - name: Avvisami per email
+        if: steps.check.outputs.procedi == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "✅ Backup del sito eseguito — ${{ steps.archivio.outputs.tag }}" \
+            --body "Il backup cifrato è pronto (${{ steps.archivio.outputs.peso }}).
+
+          Modifiche incluse dall'ultimo backup: **${{ steps.check.outputs.novita }}**
+
+          Si scarica dal pannello di gestione (scheda 💾 Backup) oppure da [Releases](../../releases/tag/${{ steps.archivio.outputs.tag }}).
+          Serve la password dei backup per aprirlo.
+
+          _Puoi chiudere questa segnalazione: serve solo come avviso._" || echo "Avviso non inviato (non bloccante)"

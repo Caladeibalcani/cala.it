@@ -109,6 +109,7 @@
     <div class="tabs">
       <button data-tab="gallerie" class="attiva">📷 Gallerie piatti</button>
       <button data-tab="blog">✍️ Nuovo articolo</button>
+      <button data-tab="backup">💾 Backup</button>
       <button data-tab="password">🔑 Password</button>
     </div>
     <div id="app-msg" class="msg"></div>
@@ -154,6 +155,24 @@ Lascia una riga vuota tra un paragrafo e l'altro.
       <div class="card">
         <h2>Articoli esistenti</h2>
         <div id="blog-lista" class="nota">…</div>
+      </div>
+    </section>
+
+    <section id="tab-backup" class="hide">
+      <div class="card">
+        <h2>Backup del sito</h2>
+        <p class="nota">Il backup contiene <strong>tutto</strong>: pagine, foto, articoli e la cronologia completa delle modifiche. È un archivio <strong>7-Zip cifrato AES-256</strong>: senza la password dei backup non si apre e non si vedono nemmeno i nomi dei file.<br>
+        Viene creato <strong>automaticamente ogni lunedì</strong>, ma solo se nel frattempo è cambiato qualcosa. Vengono conservate le ultime 4 copie.</p>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <button id="btn-backup-ora">▶️ Crea un backup adesso</button>
+          <button class="ghost" id="btn-backup-ricarica">↻ Aggiorna elenco</button>
+        </div>
+        <div class="nota" id="backup-stato"></div>
+      </div>
+      <div class="card">
+        <h2>Backup disponibili</h2>
+        <div id="backup-lista" class="nota">…</div>
+        <p class="nota" style="margin-top:14px">Per ripristinare: apri il <code>.7z</code> con la password, dentro trovi <code>sito.bundle</code> — da lì si recupera il sito completo con tutta la storia.</p>
       </div>
     </section>
 
@@ -257,9 +276,10 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     b.onclick = function () {
       document.querySelectorAll('.tabs button').forEach(function (x) { x.classList.remove('attiva'); });
       b.classList.add('attiva');
-      ['gallerie', 'blog', 'password'].forEach(function (t) {
+      ['gallerie', 'blog', 'backup', 'password'].forEach(function (t) {
         $('tab-' + t).classList.toggle('hide', t !== b.dataset.tab);
       });
+      if (b.dataset.tab === 'backup') caricaBackup();
     };
   });
 
@@ -414,6 +434,53 @@ Lascia una riga vuota tra un paragrafo e l'altro.
       $('b-titolo').value = ''; $('b-desc').value = ''; $('b-corpo').value = ''; $('b-cover').value = '';
     } catch (e) { msg($('app-msg'), e.message, 'err'); $('b-stato').textContent = ''; }
     $('btn-pubblica').disabled = false;
+  };
+
+  // ── backup ──
+  async function caricaBackup() {
+    $('backup-lista').textContent = 'Carico…';
+    try {
+      var r = await api('list_backups', {}, true);
+      if (!r.backups.length) {
+        $('backup-lista').innerHTML = 'Nessun backup ancora presente. Premi <strong>"Crea un backup adesso"</strong> per il primo.';
+        return;
+      }
+      $('backup-lista').innerHTML = '';
+      r.backups.forEach(function (b) {
+        var riga = document.createElement('div');
+        riga.className = 'foto-riga';
+        var testo = document.createElement('div');
+        testo.style.flex = '1';
+        testo.innerHTML = '<strong>' + b.data + '</strong> · ' + b.peso +
+          (b.note ? '<div style="font-size:.78rem;color:#777">' + b.note + '</div>' : '');
+        var scarica = document.createElement('button');
+        scarica.className = 'mini';
+        scarica.textContent = '⬇ Scarica';
+        scarica.disabled = !b.assetId;
+        scarica.onclick = async function () {
+          scarica.disabled = true; scarica.textContent = 'Preparo…';
+          try {
+            var d = await api('download_backup', { assetId: b.assetId }, true);
+            window.location.href = d.url;
+            scarica.textContent = '⬇ Scarica';
+          } catch (e) { msg($('app-msg'), e.message, 'err'); scarica.textContent = '⬇ Scarica'; }
+          scarica.disabled = false;
+        };
+        riga.append(testo, scarica);
+        $('backup-lista').appendChild(riga);
+      });
+    } catch (e) { $('backup-lista').textContent = ''; msg($('app-msg'), e.message, 'err'); }
+  }
+  $('btn-backup-ricarica').onclick = caricaBackup;
+  $('btn-backup-ora').onclick = async function () {
+    $('btn-backup-ora').disabled = true;
+    $('backup-stato').textContent = 'Avvio il backup…';
+    try {
+      var r = await api('request_backup', {}, true);
+      $('backup-stato').textContent = r.note;
+      setTimeout(caricaBackup, 240000);
+    } catch (e) { $('backup-stato').textContent = ''; msg($('app-msg'), e.message, 'err'); }
+    $('btn-backup-ora').disabled = false;
   };
 
   // ── password ──

@@ -31,6 +31,25 @@ Da quel momento la schermata di configurazione sparisce per sempre.
 - **Password**: si cambia da soli dalla scheda 🔑. Diventa attiva dopo 1-2 minuti.
 - Ogni salvataggio è online in 1-2 minuti.
 
+## Backup (scheda 💾 nel pannello)
+
+**Attivazione, una volta sola:** su GitHub → repo `cala.it` → **Settings** →
+**Secrets and variables** → **Actions** → **New repository secret**
+- Name: `BACKUP_PASSWORD`
+- Secret: la password con cui si apriranno gli archivi (scriversela!)
+
+Da quel momento:
+- ogni **lunedì mattina** parte un backup automatico, ma solo se qualcosa è
+  cambiato dall'ultima volta (niente copie inutili);
+- dal pannello si può farne uno **subito** e **scaricare** quelli esistenti;
+- arriva un'**email** a ogni backup eseguito (è una segnalazione aperta sul repo:
+  si può chiudere, serve solo da avviso);
+- vengono conservate le ultime **4 copie**, le più vecchie si cancellano da sole.
+
+L'archivio è un `.7z` con **AES-256** e nomi dei file nascosti; dentro c'è
+`sito.bundle`, che contiene il sito completo con tutta la cronologia:
+si ripristina con `git clone sito.bundle cala.it`.
+
 ## Note tecniche
 
 - Le foto vengono ridimensionate a 1600px nel browser prima dell'invio (jpg+webp).

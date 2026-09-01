@@ -326,6 +326,45 @@ exports.handler = async (event) => {
         return json(200, { ok: true, url: `https://caladeibalcani.it/blog/${slug}.html`, note: 'Articolo pubblicato: online tra 1-2 minuti.' });
       }
 
+      // ── backup ──────────────────────────────────────────────────────────
+      case 'list_backups': {
+        const rel = await gh(token, `/repos/${REPO}/releases?per_page=20`);
+        const backups = rel.filter(r => r.tag_name.startsWith('backup-')).map(r => {
+          const a = (r.assets || [])[0] || {};
+          return {
+            tag: r.tag_name,
+            data: (r.published_at || r.created_at || '').slice(0, 10),
+            peso: a.size ? (a.size / 1048576).toFixed(0) + ' MB' : '—',
+            assetId: a.id || null,
+            note: (r.body || '').split('\n').find(l => l.includes('Modifiche')) || '',
+          };
+        });
+        return json(200, { backups });
+      }
+
+      case 'download_backup': {
+        const id = Number(req.assetId);
+        if (!id) return json(400, { error: 'Backup non indicato' });
+        // GitHub risponde con un rimando a un indirizzo temporaneo gia' autorizzato:
+        // lo passiamo al browser, che scarica direttamente (la funzione non potrebbe
+        // reggere centinaia di MB).
+        const res = await fetch(`${API}/repos/${REPO}/releases/assets/${id}`, {
+          headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/octet-stream', 'User-Agent': 'cala-admin' },
+          redirect: 'manual',
+        });
+        const url = res.headers.get('location');
+        if (!url) return json(500, { error: 'Link di download non disponibile (HTTP ' + res.status + ')' });
+        return json(200, { url });
+      }
+
+      case 'request_backup': {
+        await commitFiles(token, [{
+          path: 'data/backup-request.json',
+          content: JSON.stringify({ richiesto: new Date().toISOString(), da: 'pannello admin' }, null, 1),
+        }], 'Admin: richiesta di backup manuale');
+        return json(200, { ok: true, note: 'Backup avviato. Ci vogliono circa 3-5 minuti: ricarica l\'elenco tra poco.' });
+      }
+
       default:
         return json(400, { error: 'Azione sconosciuta' });
     }
