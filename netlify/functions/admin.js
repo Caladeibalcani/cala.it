@@ -5,7 +5,10 @@
 
 const crypto = require('crypto');
 
-const REPO = process.env.GITHUB_REPO || 'dedonnoantonio75-create/cala.it';
+// Nome canonico del repo (dopo il trasferimento all'organizzazione Caladeibalcani).
+// Il vecchio percorso dedonnoantonio75-create/cala.it risponde solo con un redirect 301,
+// che le richieste POST della Git Data API non seguono: qui serve il nome attuale.
+const REPO = process.env.GITHUB_REPO || 'Caladeibalcani/cala.it';
 const BRANCH = process.env.GITHUB_BRANCH || 'main';
 const TOKEN = process.env.GITHUB_TOKEN || '';
 const API = 'https://api.github.com';
