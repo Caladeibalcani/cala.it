@@ -12,9 +12,8 @@
   body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--cream); color:#222; min-height:100vh; }
   header { background:var(--navy); color:#fff; padding:14px 22px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
   header h1 { font-size:1.05rem; font-weight:600; letter-spacing:.04em; }
-  header .sp { flex:1 }
   .tag { color:var(--gold); font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; }
-  main { max-width:1080px; margin:0 auto; padding:26px 18px 80px; }
+  main { max-width:1080px; margin:0 auto; padding:26px 18px 90px; }
   .card { background:#fff; border:1px solid var(--border); border-radius:8px; padding:24px; margin-bottom:20px; box-shadow:0 4px 18px rgba(12,26,46,.05); }
   h2 { font-size:1.05rem; margin-bottom:14px; color:var(--navy); }
   label { display:block; font-size:.8rem; font-weight:600; color:var(--mid); margin:12px 0 4px; letter-spacing:.03em; }
@@ -27,7 +26,7 @@
   button.mini { padding:4px 9px; font-size:.8rem; background:var(--navy); }
   button.mini.rosso { background:#a33; }
   button:disabled { opacity:.5; cursor:default; }
-  .msg { padding:11px 14px; border-radius:5px; margin:12px 0; font-size:.9rem; display:none; }
+  .msg { padding:11px 14px; border-radius:5px; margin:12px 0; font-size:.9rem; display:none; line-height:1.5; }
   .msg.ok { background:#e9f5e9; color:#1e6b1e; display:block; }
   .msg.err { background:#fdecea; color:#a33; display:block; }
   .tabs { display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
@@ -38,33 +37,63 @@
   .foto-riga input[type=text] { flex:1; min-width:120px; }
   .foto-riga select { width:auto; }
   .cat-blocco { margin-bottom:26px; }
-  .cat-testa { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+  .cat-testa { display:flex; align-items:center; gap:12px; margin-bottom:10px; flex-wrap:wrap; }
   .cat-testa h3 { font-size:1rem; color:var(--navy); }
   .cat-testa .conta { font-size:.78rem; color:var(--mid); }
   .salva-bar { position:sticky; bottom:0; background:#fff; border-top:2px solid var(--gold); padding:12px 18px; display:none; align-items:center; gap:14px; z-index:50; margin:0 -18px; }
   .salva-bar.attiva { display:flex; }
   .hide { display:none !important; }
-  .nota { font-size:.8rem; color:var(--mid); margin-top:6px; line-height:1.5; }
-  .login-box { max-width:420px; margin:60px auto; }
+  .nota { font-size:.8rem; color:var(--mid); margin-top:6px; line-height:1.6; }
+  .box { max-width:520px; margin:50px auto; }
   .cap { display:flex; gap:10px; align-items:center; }
   .cap input { width:90px; }
-  progress { width:100%; }
+  .passi { font-size:.86rem; line-height:1.8; color:#333; background:var(--cream); border-left:3px solid var(--gold); padding:14px 18px; border-radius:0 6px 6px 0; margin-bottom:8px; }
+  .passi code { background:#fff; padding:1px 5px; border-radius:3px; font-size:.85em; }
+  a { color:#96762e; }
 </style>
 </head>
 <body>
 <header>
   <span class="tag">Cala dei Balcani</span>
   <h1>Pannello di Gestione</h1>
-  <span class="sp"></span>
+  <span style="flex:1"></span>
   <button id="btn-esci" class="ghost hide">Esci</button>
 </header>
 <main>
 
+  <!-- CONFIGURAZIONE INIZIALE -->
+  <div id="v-setup" class="box card hide">
+    <h2>Configurazione iniziale</h2>
+    <div class="passi">
+      Serve una volta sola. Occorre un <strong>token GitHub</strong> che permetta al pannello di salvare le modifiche:
+      <br>1. Apri <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>
+      <br>2. Name: <code>cala-admin</code> · Expiration: 1 anno
+      <br>3. Repository access: <strong>Only select repositories</strong> → <code>cala.it</code>
+      <br>4. Permissions → Repository → <strong>Contents: Read and write</strong>
+      <br>5. <strong>Generate token</strong> e copia il codice <code>github_pat_…</code>
+    </div>
+    <div id="setup-msg" class="msg"></div>
+    <label for="s-token">Token GitHub</label>
+    <input type="password" id="s-token" placeholder="github_pat_...">
+    <label for="s-pass">Scegli la password del pannello (minimo 10 caratteri)</label>
+    <input type="password" id="s-pass" autocomplete="new-password">
+    <label for="s-pass2">Ripeti la password</label>
+    <input type="password" id="s-pass2" autocomplete="new-password">
+    <label>Verifica anti-robot</label>
+    <div class="cap">
+      <span id="s-cap-testo" style="font-weight:700">…</span>
+      <input type="number" id="s-cap-risposta" placeholder="?">
+      <button class="ghost" id="s-cap-nuovo" type="button" title="Nuova domanda">↻</button>
+    </div>
+    <div style="margin-top:18px"><button id="btn-setup">Configura il pannello</button></div>
+    <p class="nota">Il token viene salvato <strong>cifrato</strong> con la password scelta: senza quella password non è utilizzabile da nessuno.</p>
+  </div>
+
   <!-- LOGIN -->
-  <div id="v-login" class="login-box card">
+  <div id="v-login" class="box card hide">
     <h2>Accesso riservato</h2>
     <div id="login-msg" class="msg"></div>
-    <label for="l-pass">Password amministratore</label>
+    <label for="l-pass">Password</label>
     <input type="password" id="l-pass" autocomplete="current-password">
     <label>Verifica anti-robot</label>
     <div class="cap">
@@ -84,22 +113,20 @@
     </div>
     <div id="app-msg" class="msg"></div>
 
-    <!-- GALLERIE -->
     <section id="tab-gallerie">
       <div class="card">
         <h2>Gallerie dell'Area Privata</h2>
-        <p class="nota">Sposta le foto con ↑ e ↓, cambiale di categoria col menu a tendina, eliminale con ✖, aggiungi foto nuove col pulsante di ogni categoria. Le didascalie compaiono quando la foto viene ingrandita. <strong>Ricordati di premere "Salva le modifiche" in fondo.</strong></p>
+        <p class="nota">Sposta le foto con ↑ e ↓, cambiale di categoria col menu a tendina, eliminale con ✖, aggiungine di nuove col pulsante di ogni categoria. La didascalia compare quando la foto viene ingrandita. <strong>Ricordati di premere "Salva le modifiche" in fondo alla pagina.</strong></p>
       </div>
       <div id="gallerie-corpo"></div>
       <div class="salva-bar" id="salva-bar">
         <strong>Modifiche non salvate</strong>
-        <span class="sp" style="flex:1"></span>
+        <span style="flex:1"></span>
         <button class="ghost" id="btn-annulla">Annulla</button>
         <button id="btn-salva">💾 Salva le modifiche</button>
       </div>
     </section>
 
-    <!-- BLOG -->
     <section id="tab-blog" class="hide">
       <div class="card">
         <h2>Pubblica un nuovo articolo</h2>
@@ -130,18 +157,15 @@ Lascia una riga vuota tra un paragrafo e l'altro.
       </div>
     </section>
 
-    <!-- PASSWORD -->
     <section id="tab-password" class="hide">
       <div class="card">
         <h2>Cambia la password di accesso</h2>
-        <label for="p-vecchia">Password attuale</label>
-        <input type="password" id="p-vecchia" autocomplete="current-password">
         <label for="p-nuova">Nuova password (minimo 10 caratteri)</label>
         <input type="password" id="p-nuova" autocomplete="new-password">
         <label for="p-nuova2">Ripeti la nuova password</label>
         <input type="password" id="p-nuova2" autocomplete="new-password">
         <div style="margin-top:16px"><button id="btn-password">Cambia password</button></div>
-        <p class="nota">Dopo il cambio dovrai rientrare con la password nuova. Conservala in un posto sicuro: senza, non si entra.</p>
+        <p class="nota">La nuova password diventa attiva dopo 1-2 minuti (il tempo di aggiornamento del sito). <strong>Conservala bene: senza quella non si entra più e non è recuperabile.</strong></p>
       </div>
     </section>
   </div>
@@ -150,50 +174,73 @@ Lascia una riga vuota tra un paragrafo e l'altro.
 <script>
 (function () {
   var API = '/.netlify/functions/admin';
-  var token = null, challenge = null, gallerie = null, sporco = false;
+  var pass = null, challenge = null, sChallenge = null, gallerie = null, sporco = false;
 
   function $(id) { return document.getElementById(id); }
-  function msg(el, testo, tipo) { el.textContent = testo || ''; el.className = 'msg' + (testo ? ' ' + tipo : ''); }
+  function msg(el, testo, tipo) { el.innerHTML = testo || ''; el.className = 'msg' + (testo ? ' ' + tipo : ''); }
 
-  async function api(action, dati, conAuth) {
+  async function api(action, dati, conPass) {
+    var corpo = Object.assign({ action: action }, dati || {});
+    if (conPass) corpo.password = pass;
     var r = await fetch(API, {
-      method: 'POST',
-      headers: Object.assign({ 'Content-Type': 'application/json' },
-        conAuth && token ? { 'Authorization': 'Bearer ' + token } : {}),
-      body: JSON.stringify(Object.assign({ action: action }, dati || {})),
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(corpo),
     });
-    var j = await r.json().catch(function () { return { error: 'Risposta non valida' }; });
-    if (!r.ok) { if (j.challenge) impostaCaptcha(j.challenge); throw new Error(j.error || ('Errore ' + r.status)); }
+    var j = await r.json().catch(function () { return { error: 'Risposta non valida dal server' }; });
+    if (!r.ok) {
+      if (j.challenge) { challenge = j.challenge; mostraCaptcha(); }
+      throw new Error(j.error || ('Errore ' + r.status));
+    }
     return j;
   }
 
   // ── captcha ──
-  function impostaCaptcha(c) { challenge = c; $('cap-testo').textContent = 'Quanto fa ' + c.a + ' + ' + c.b + '?'; $('cap-risposta').value = ''; }
+  function mostraCaptcha() {
+    if (challenge) { $('cap-testo').textContent = 'Quanto fa ' + challenge.a + ' + ' + challenge.b + '?'; $('cap-risposta').value = ''; }
+    if (sChallenge) { $('s-cap-testo').textContent = 'Quanto fa ' + sChallenge.a + ' + ' + sChallenge.b + '?'; $('s-cap-risposta').value = ''; }
+  }
   async function nuovoCaptcha() {
-    try { impostaCaptcha((await api('challenge')).challenge); }
-    catch (e) { msg($('login-msg'), e.message, 'err'); }
+    var c = (await api('challenge')).challenge;
+    challenge = c; sChallenge = c; mostraCaptcha();
   }
   $('cap-nuovo').onclick = nuovoCaptcha;
+  $('s-cap-nuovo').onclick = nuovoCaptcha;
+
+  // ── setup ──
+  $('btn-setup').onclick = async function () {
+    msg($('setup-msg'), '');
+    if ($('s-pass').value !== $('s-pass2').value) return msg($('setup-msg'), 'Le due password non coincidono', 'err');
+    $('btn-setup').disabled = true;
+    try {
+      var r = await api('setup', {
+        ghToken: $('s-token').value.trim(), password: $('s-pass').value,
+        challenge: sChallenge, answer: $('s-cap-risposta').value,
+      });
+      msg($('setup-msg'), '✅ ' + r.note + '<br>Questa pagina si ricaricherà da sola tra 2 minuti.', 'ok');
+      setTimeout(function () { location.reload(); }, 120000);
+    } catch (e) { msg($('setup-msg'), e.message, 'err'); }
+    $('btn-setup').disabled = false;
+  };
 
   // ── login ──
   $('btn-login').onclick = async function () {
     msg($('login-msg'), '');
     try {
-      var r = await api('login', { password: $('l-pass').value, challenge: challenge, answer: $('cap-risposta').value });
-      token = r.token;
-      try { sessionStorage.setItem('cala-admin-token', token); } catch (e) {}
+      await api('login', { password: $('l-pass').value, challenge: challenge, answer: $('cap-risposta').value });
+      pass = $('l-pass').value;
+      try { sessionStorage.setItem('cala-admin-pass', pass); } catch (e) {}
       avvia();
     } catch (e) { msg($('login-msg'), e.message, 'err'); }
   };
   $('l-pass').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('btn-login').click(); });
   $('btn-esci').onclick = function () {
-    token = null; try { sessionStorage.removeItem('cala-admin-token'); } catch (e) {}
+    pass = null; try { sessionStorage.removeItem('cala-admin-pass'); } catch (e) {}
     location.reload();
   };
 
-  // ── avvio app ──
+  // ── avvio ──
   async function avvia() {
     $('v-login').classList.add('hide');
+    $('v-setup').classList.add('hide');
     $('v-app').classList.remove('hide');
     $('btn-esci').classList.remove('hide');
     try {
@@ -206,7 +253,6 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     } catch (e) { msg($('app-msg'), e.message, 'err'); }
   }
 
-  // ── tabs ──
   document.querySelectorAll('.tabs button').forEach(function (b) {
     b.onclick = function () {
       document.querySelectorAll('.tabs button').forEach(function (x) { x.classList.remove('attiva'); });
@@ -234,9 +280,7 @@ Lascia una riga vuota tra un paragrafo e l'altro.
       add.onclick = function () { aggiungiFoto(ci); };
       testa.appendChild(add);
       box.appendChild(testa);
-      cat.foto.forEach(function (f, fi) {
-        box.appendChild(rigaFoto(ci, fi, f));
-      });
+      cat.foto.forEach(function (f, fi) { box.appendChild(rigaFoto(ci, fi, f)); });
       corpo.appendChild(box);
     });
   }
@@ -261,17 +305,16 @@ Lascia una riga vuota tra un paragrafo e l'altro.
       gallerie.categorie[dest].foto.push(f);
       segnaSporco(); disegnaGallerie();
     };
-    function btn(testo, cls, fn) { var b = document.createElement('button'); b.className = 'mini ' + (cls || ''); b.textContent = testo; b.onclick = fn; return b; }
+    function btn(t, cls, fn) { var b = document.createElement('button'); b.className = 'mini ' + (cls || ''); b.textContent = t; b.onclick = fn; return b; }
     var su = btn('↑', '', function () {
       if (fi === 0) return;
-      var arr = gallerie.categorie[ci].foto;
-      arr.splice(fi - 1, 0, arr.splice(fi, 1)[0]);
+      var a = gallerie.categorie[ci].foto; a.splice(fi - 1, 0, a.splice(fi, 1)[0]);
       segnaSporco(); disegnaGallerie();
     });
     var giu = btn('↓', '', function () {
-      var arr = gallerie.categorie[ci].foto;
-      if (fi >= arr.length - 1) return;
-      arr.splice(fi + 1, 0, arr.splice(fi, 1)[0]);
+      var a = gallerie.categorie[ci].foto;
+      if (fi >= a.length - 1) return;
+      a.splice(fi + 1, 0, a.splice(fi, 1)[0]);
       segnaSporco(); disegnaGallerie();
     });
     var del = btn('✖', 'rosso', function () {
@@ -283,7 +326,6 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     return riga;
   }
 
-  // ridimensiona lato client e ritorna {jpgB64, webpB64}
   function preparaImmagine(file) {
     return new Promise(function (resolve, reject) {
       var url = URL.createObjectURL(file);
@@ -363,14 +405,12 @@ Lascia una riga vuota tra un paragrafo e l'altro.
       var img = await preparaImmagine(file);
       $('b-stato').textContent = 'Pubblico…';
       var r = await api('save_post', {
-        titolo: $('b-titolo').value,
-        descrizione: $('b-desc').value,
-        categoria: $('b-cat').value,
-        corpo: $('b-corpo').value,
+        titolo: $('b-titolo').value, descrizione: $('b-desc').value,
+        categoria: $('b-cat').value, corpo: $('b-corpo').value,
         coverJpg: img.jpg, coverWebp: img.webp,
       }, true);
-      msg($('app-msg'), (r.note || 'Pubblicato!') + ' → ' + r.url, 'ok');
-      $('b-stato').innerHTML = 'Pubblicato: <a href="' + r.url + '" target="_blank">' + r.url + '</a> (online tra 1-2 minuti)';
+      msg($('app-msg'), r.note || 'Pubblicato!', 'ok');
+      $('b-stato').innerHTML = 'Pubblicato: <a href="' + r.url + '" target="_blank">' + r.url + '</a>';
       $('b-titolo').value = ''; $('b-desc').value = ''; $('b-corpo').value = ''; $('b-cover').value = '';
     } catch (e) { msg($('app-msg'), e.message, 'err'); $('b-stato').textContent = ''; }
     $('btn-pubblica').disabled = false;
@@ -381,9 +421,10 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     if ($('p-nuova').value !== $('p-nuova2').value) return msg($('app-msg'), 'Le due password nuove non coincidono', 'err');
     $('btn-password').disabled = true;
     try {
-      var r = await api('change_password', { oldPassword: $('p-vecchia').value, newPassword: $('p-nuova').value }, true);
+      var nuova = $('p-nuova').value;
+      var r = await api('change_password', { newPassword: nuova }, true);
       msg($('app-msg'), r.note || 'Password cambiata.', 'ok');
-      $('p-vecchia').value = $('p-nuova').value = $('p-nuova2').value = '';
+      $('p-nuova').value = $('p-nuova2').value = '';
     } catch (e) { msg($('app-msg'), e.message, 'err'); }
     $('btn-password').disabled = false;
   };
@@ -391,15 +432,24 @@ Lascia una riga vuota tra un paragrafo e l'altro.
   // ── init ──
   (async function () {
     try {
-      var salvato = sessionStorage.getItem('cala-admin-token');
-      if (salvato) {
-        token = salvato;
-        var ok = (await api('me', {}, true)).ok;
-        if (ok) return avvia();
-        token = null;
+      var st = await api('status');
+      if (!st.configured) {
+        $('v-setup').classList.remove('hide');
+        return nuovoCaptcha();
       }
-    } catch (e) {}
-    nuovoCaptcha();
+      var salvata = null;
+      try { salvata = sessionStorage.getItem('cala-admin-pass'); } catch (e) {}
+      if (salvata) {
+        pass = salvata;
+        try { await api('get_data', {}, true); return avvia(); }
+        catch (e) { pass = null; try { sessionStorage.removeItem('cala-admin-pass'); } catch (e2) {} }
+      }
+      $('v-login').classList.remove('hide');
+      await nuovoCaptcha();
+    } catch (e) {
+      $('v-login').classList.remove('hide');
+      msg($('login-msg'), 'Impossibile contattare il server: ' + e.message, 'err');
+    }
   })();
 })();
 </script>
