@@ -143,7 +143,7 @@ function initSlideshow(el) {
 }
 document.querySelectorAll('.slideshow').forEach(initSlideshow);
 
-// ── Contact forms (Netlify Forms AJAX) ──
+// ── Moduli di contatto (invio a Netlify Forms) ──
 const SUCCESS_MSG = {
   it: 'Grazie per il messaggio. Vi risponderemo entro 24 ore.',
   en: 'Thank you for your message. We will get back to you within 24 hours.',
@@ -151,23 +151,76 @@ const SUCCESS_MSG = {
   es: 'Gracias por su mensaje. Le responderemos en menos de 24 horas.',
   de: 'Vielen Dank für Ihre Nachricht. Wir melden uns innerhalb von 24 Stunden.',
 };
+const ERROR_MSG = {
+  it: 'Invio non riuscito. Scriveteci a <a href="mailto:info@caladeibalcani.it">info@caladeibalcani.it</a> o chiamate il <a href="tel:+393349985447">+39 334 998 5447</a>.',
+  en: 'Sending failed. Please write to <a href="mailto:info@caladeibalcani.it">info@caladeibalcani.it</a> or call <a href="tel:+393349985447">+39 334 998 5447</a>.',
+  fr: 'Échec de l’envoi. Écrivez-nous à <a href="mailto:info@caladeibalcani.it">info@caladeibalcani.it</a> ou appelez le <a href="tel:+393349985447">+39 334 998 5447</a>.',
+  es: 'Envío fallido. Escribidnos a <a href="mailto:info@caladeibalcani.it">info@caladeibalcani.it</a> o llamad al <a href="tel:+393349985447">+39 334 998 5447</a>.',
+  de: 'Senden fehlgeschlagen. Schreiben Sie an <a href="mailto:info@caladeibalcani.it">info@caladeibalcani.it</a> oder rufen Sie an: <a href="tel:+393349985447">+39 334 998 5447</a>.',
+};
+const CAPTCHA_LABEL = {
+  it: 'Verifica anti-robot: quanto fa',
+  en: 'Anti-robot check: how much is',
+  fr: 'Vérification anti-robot : combien font',
+  es: 'Verificación anti-robot: ¿cuánto es',
+  de: 'Sicherheitsabfrage: wie viel ist',
+};
+const CAPTCHA_ERR = {
+  it: 'Risposta non corretta: riprovate.',
+  en: 'Wrong answer: please try again.',
+  fr: 'Réponse incorrecte : réessayez.',
+  es: 'Respuesta incorrecta: inténtelo de nuevo.',
+  de: 'Falsche Antwort: bitte erneut versuchen.',
+};
 const pageLang = (document.documentElement.lang || 'it').slice(0, 2);
 const successText = SUCCESS_MSG[pageLang] || SUCCESS_MSG.it;
+const errorText = ERROR_MSG[pageLang] || ERROR_MSG.it;
 
-// Netlify's build post-processing strips data-netlify="true" from served HTML
-// (replaced by a hidden form-name field for no-JS fallback), so match on name
-// instead — every real form here has one; the area-privata placeholder form does not.
+// Captcha aritmetico: niente servizi esterni, niente cookie, nessun rallentamento.
+// Viene aggiunto solo ai moduli che non hanno gia' il reCAPTCHA di Netlify.
+function aggiungiCaptcha(form) {
+  if (form.querySelector('[data-netlify-recaptcha], .g-recaptcha, .captcha-campo')) return null;
+  const btn = form.querySelector('button[type="submit"]');
+  if (!btn) return null;
+  const a = 1 + Math.floor(Math.random() * 9);
+  const b = 1 + Math.floor(Math.random() * 9);
+  const id = 'captcha-' + Math.random().toString(36).slice(2, 8);
+  const box = document.createElement('div');
+  box.className = 'form-group captcha-campo';
+  box.innerHTML = '<label for="' + id + '">' + (CAPTCHA_LABEL[pageLang] || CAPTCHA_LABEL.it) +
+    ' ' + a + ' + ' + b + '?</label>' +
+    '<input type="number" id="' + id + '" inputmode="numeric" autocomplete="off" required ' +
+    'style="max-width:160px" aria-describedby="' + id + '-err">' +
+    '<p id="' + id + '-err" hidden style="color:#b3261e;font-size:.82rem;margin:6px 0 0">' +
+    (CAPTCHA_ERR[pageLang] || CAPTCHA_ERR.it) + '</p>';
+  // inserisce subito prima del blocco che contiene il pulsante di invio
+  let ancora = btn;
+  while (ancora.parentElement && ancora.parentElement !== form) ancora = ancora.parentElement;
+  form.insertBefore(box, ancora);
+  return { input: box.querySelector('input'), errore: box.querySelector('p'), somma: a + b };
+}
+
+// Netlify sostituisce data-netlify="true" con un campo nascosto form-name:
+// per riconoscere i moduli veri ci basiamo sull'attributo name.
 document.querySelectorAll('form[name]').forEach(form => {
+  const captcha = aggiungiCaptcha(form);
+
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const required = form.querySelectorAll('[required]');
     let valid = true;
-    required.forEach(el => {
+    form.querySelectorAll('[required]').forEach(el => {
       const filled = el.type === 'checkbox' ? el.checked : el.value.trim();
       el.style.borderColor = filled ? '' : 'red';
       if (!filled) valid = false;
     });
     if (!valid) return;
+
+    if (captcha) {
+      const giusto = Number(captcha.input.value) === captcha.somma;
+      captcha.errore.hidden = giusto;
+      captcha.input.style.borderColor = giusto ? '' : 'red';
+      if (!giusto) { captcha.input.focus(); return; }
+    }
 
     const btn = form.querySelector('button[type="submit"]');
     if (btn) btn.disabled = true;
@@ -177,12 +230,22 @@ document.querySelectorAll('form[name]').forEach(form => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(new FormData(form)).toString(),
     })
-      .then(() => {
-        form.innerHTML = `<p style="color:var(--gold);font-family:var(--font-italic);font-style:italic;font-size:1.2rem;text-align:center;padding:40px 0">${successText}</p>`;
+      .then(res => {
+        // fetch non fallisce sugli errori HTTP: senza questo controllo un invio
+        // rifiutato (es. captcha non risolto) mostrerebbe comunque "grazie".
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.innerHTML = '<p style="color:var(--gold);font-family:var(--font-italic);font-style:italic;font-size:1.2rem;text-align:center;padding:40px 0">' + successText + '</p>';
       })
       .catch(() => {
         if (btn) btn.disabled = false;
-        alert(successText);
+        let avviso = form.querySelector('.form-errore');
+        if (!avviso) {
+          avviso = document.createElement('p');
+          avviso.className = 'form-errore';
+          avviso.style.cssText = 'background:#fdecea;color:#a33;padding:12px 14px;border-radius:5px;font-size:.9rem;line-height:1.6;margin-top:14px';
+          form.appendChild(avviso);
+        }
+        avviso.innerHTML = errorText;
       });
   });
 });

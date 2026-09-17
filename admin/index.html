@@ -102,6 +102,18 @@
       <button class="ghost" id="cap-nuovo" type="button" title="Nuova domanda">↻</button>
     </div>
     <div style="margin-top:18px"><button id="btn-login">Entra</button></div>
+    <button type="button" id="btn-recupera" style="display:block;width:100%;margin-top:14px;background:none;border:none;color:#96762e;font-size:.86rem;text-decoration:underline;cursor:pointer;padding:6px">Password dimenticata?</button>
+    <div class="passi" id="recupero-box" hidden style="margin-top:14px">
+      <strong>La password non è recuperabile</strong> — per sicurezza sul sito è salvata solo in forma cifrata, quindi nessuno (nemmeno noi) può rileggerla. Si riparte però in due minuti:
+      <br><br>
+      1. Apri il file <a href="https://github.com/Caladeibalcani/cala.it/edit/main/netlify/functions/token.json" target="_blank" rel="noopener">token.json su GitHub</a>
+      <br>2. Clicca la matita ✏️ e sostituisci <strong>tutto</strong> il contenuto con:
+      <br><code>{"configured": false}</code>
+      <br>3. <strong>Commit changes</strong> e attendi 1-2 minuti
+      <br>4. Ricarica questa pagina: ricompare la configurazione iniziale, dove scegli una password nuova (serve di nuovo un token GitHub)
+      <br><br>
+      Le gallerie, gli articoli e i backup <strong>non si perdono</strong>: si azzera solo l'accesso al pannello.
+    </div>
   </div>
 
   <!-- APP -->
@@ -251,6 +263,10 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     } catch (e) { msg($('login-msg'), e.message, 'err'); }
   };
   $('l-pass').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('btn-login').click(); });
+  $('btn-recupera').onclick = function () {
+    var box = $('recupero-box');
+    box.hidden = !box.hidden;
+  };
   $('btn-esci').onclick = function () {
     pass = null; try { sessionStorage.removeItem('cala-admin-pass'); } catch (e) {}
     location.reload();

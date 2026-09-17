@@ -134,11 +134,26 @@
                 <label for="ap-pass">Password</label>
                 <input type="password" id="ap-pass" placeholder="Password ricevuta dal team" required autocomplete="current-password">
               </div>
-              <p id="ap-err" hidden style="color:#b3261e;font-size:.88rem;margin:-8px 0 12px">Password non corretta. Riprovate o contattateci.</p>
+              <p id="ap-err" hidden style="color:#b3261e;font-size:.88rem;margin:-8px 0 12px">Password non corretta. Riprovate o richiedetela qui sotto.</p>
+              <div class="form-group">
+                <label for="ap-cap">Verifica anti-robot: quanto fa <span id="ap-cap-dom">…</span>?</label>
+                <input type="number" id="ap-cap" inputmode="numeric" autocomplete="off" required style="max-width:160px">
+              </div>
+              <p id="ap-cap-err" hidden style="color:#b3261e;font-size:.88rem;margin:-8px 0 12px">Risposta non corretta: riprovate.</p>
               <button type="submit" class="btn btn--gold" style="width:100%;justify-content:center">Accedi</button>
             </form>
+            <button type="button" id="ap-recupera" style="display:block;width:100%;margin-top:14px;background:none;border:none;color:var(--gold);font-size:.86rem;text-decoration:underline;cursor:pointer;padding:6px">Password dimenticata o mai ricevuta?</button>
+            <div class="login-note" id="ap-recupero-box" hidden>
+              <strong>Come recuperare la password</strong><br>
+              La password è personale e viene consegnata dal team di Cala dei Balcani: per sicurezza non viene inviata in automatico da questo sito.<br><br>
+              Richiedetela direttamente a noi:
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+                <a class="btn btn--gold" style="font-size:.8rem;padding:9px 16px" href="mailto:info@caladeibalcani.it?subject=Richiesta%20password%20Area%20Privata&amp;body=Buongiorno%2C%0Asono%20%5Bnome%20e%20cognome%5D%20e%20la%20data%20del%20nostro%20matrimonio%20e%CC%80%20%5Bdata%5D.%0AVi%20chiedo%20la%20password%20per%20accedere%20all%27Area%20Privata.%0AGrazie%21">✉️ Richiedila via email</a>
+                <a class="btn btn--dark" style="font-size:.8rem;padding:9px 16px" href="tel:+393349985447">📞 +39 334 998 5447</a>
+              </div>
+            </div>
             <div class="login-note">
-              Non avete ancora ricevuto la password? Contattateci a <a href="mailto:info@caladeibalcani.it" style="color:var(--gold)">info@caladeibalcani.it</a> o chiamate il <a href="tel:+393349985447" style="color:var(--gold)">+39 334 998 5447</a>. La password viene comunicata direttamente dal team di Cala dei Balcani.
+              La password viene comunicata direttamente dal team di Cala dei Balcani alle coppie che hanno formalizzato la prenotazione.
             </div>
           </div>
         </div>
@@ -393,10 +408,25 @@
     }
   }
 
+  // captcha aritmetico (nessun servizio esterno, nessun cookie)
+  var capA = 1 + Math.floor(Math.random() * 9), capB = 1 + Math.floor(Math.random() * 9);
+  document.getElementById('ap-cap-dom').textContent = capA + ' + ' + capB;
+
   document.getElementById('ap-form').addEventListener('submit', function (e) {
     e.preventDefault();
     document.getElementById('ap-err').hidden = true;
+    var capOk = Number(document.getElementById('ap-cap').value) === capA + capB;
+    document.getElementById('ap-cap-err').hidden = capOk;
+    document.getElementById('ap-cap').style.borderColor = capOk ? '' : 'red';
+    if (!capOk) { document.getElementById('ap-cap').focus(); return; }
     tryUnlock(document.getElementById('ap-pass').value.trim(), false);
+  });
+
+  // tasto "password dimenticata"
+  document.getElementById('ap-recupera').addEventListener('click', function () {
+    var box = document.getElementById('ap-recupero-box');
+    box.hidden = !box.hidden;
+    if (!box.hidden) box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 
   try {
