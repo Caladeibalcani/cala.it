@@ -50,11 +50,6 @@
      "c": ""
     },
     {
-     "w": "img/piatti-riservati/antipasto-polpo-zucchine-cala-dei-balcani.webp",
-     "j": "img/piatti-riservati/antipasto-polpo-zucchine-cala-dei-balcani.jpg",
-     "c": "Polpo grigliato con zucchine"
-    },
-    {
      "w": "img/Tagliatelle-di-seppia-e-patate-ratta.webp",
      "j": "img/Tagliatelle-di-seppia-e-patate-ratta.jpg",
      "c": "Tagliatelle di seppia e patate ratta"
@@ -70,115 +65,15 @@
      "c": "Insalata di polpo"
     },
     {
-     "w": "img/Ricci-di-polpo-su-doppia-consistenza-di-caciocavallo-podolico-rotolini-di-peperoni-e-pomodorini.webp",
-     "j": "img/Ricci-di-polpo-su-doppia-consistenza-di-caciocavallo-podolico-rotolini-di-peperoni-e-pomodorini.jpg",
-     "c": "Ricci di polpo su doppia consistenza di caciocavallo podolico"
-    },
-    {
      "w": "img/julienne-seppia-sedano-cucina-salentina-cala-dei-balcani-salento.webp",
      "j": "img/julienne-seppia-sedano-cucina-salentina-cala-dei-balcani-salento.jpg",
      "c": "Julienne di seppia e sedano in salsa citronette"
-    },
-    {
-     "w": "img/Tortino-di-pesce-spada-con-soppressata-di-polpo-crema-di-pecorino-finocchio-marinato-e-chicchi-di-melagrana.webp",
-     "j": "img/Tortino-di-pesce-spada-con-soppressata-di-polpo-crema-di-pecorino-finocchio-marinato-e-chicchi-di-melagrana.jpg",
-     "c": "Tortino di pesce spada con soppressata di polpo e melagrana"
     }
    ]
   },
   {
    "nome": "Primi Piatti",
    "foto": [
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-01.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-01.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-02.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-02.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-03.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-03.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-04.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-04.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-05.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-05.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-06.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-06.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-08.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-08.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-10.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-10.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-11.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-11.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-12.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-12.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-13.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-13.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-14.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-14.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-15.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-15.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-16.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-16.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-17.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-17.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-18.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-18.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-19.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-19.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-20.webp",
-     "j": "img/piatti-riservati/primi-piatti-cala-dei-balcani-salento-20.jpg",
-     "c": ""
-    },
     {
      "w": "img/piatti-riservati/calamarata-brunitta-in-guazzetto-di-mare.webp",
      "j": "img/piatti-riservati/calamarata-brunitta-in-guazzetto-di-mare.jpg",
@@ -220,91 +115,15 @@
      "c": ""
     },
     {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-02.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-02.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-03.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-03.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-04.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-04.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-05.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-05.jpg",
-     "c": ""
-    },
-    {
      "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-06.webp",
      "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-06.jpg",
      "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-08.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-08.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-09.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-09.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-10.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-10.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-11.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-11.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-12.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-12.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-13.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-13.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-14.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-14.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-15.webp",
-     "j": "img/piatti-riservati/secondi-piatti-cala-dei-balcani-salento-15.jpg",
-     "c": ""
-    },
-    {
-     "w": "img/piatti-riservati/rana-pescatrice-in-camicia-di-pancetta.webp",
-     "j": "img/piatti-riservati/rana-pescatrice-in-camicia-di-pancetta.jpg",
-     "c": "Rana pescatrice con zucchine in camicia di pancetta tesa"
     }
    ]
   },
   {
    "nome": "Dolci",
-   "foto": [
-    {
-     "w": "img/piatti-riservati/pasticceria-mignon-cala-dei-balcani.webp",
-     "j": "img/piatti-riservati/pasticceria-mignon-cala-dei-balcani.jpg",
-     "c": "Pasticceria mignon"
-    },
-    {
-     "w": "img/piatti-riservati/torta-nuziale-cala-dei-balcani.webp",
-     "j": "img/piatti-riservati/torta-nuziale-cala-dei-balcani.jpg",
-     "c": "La torta nuziale con vista sul mare"
-    }
-   ]
+   "foto": []
   },
   {
    "nome": "Allestimenti",
