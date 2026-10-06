@@ -1335,7 +1335,22 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/azienda-agricola.html"/>
-  </url>
+      <image:image>
+      <image:loc>https://caladeibalcani.it/img/spighe-grano-senatore-cappelli-maturo-azienda-agricola-brunitta-salento.jpg</image:loc>
+      <image:title>Le spighe di grano Senatore Cappelli</image:title>
+      <image:caption>Le spighe mature di grano Senatore Cappelli nei campi dell&#8217;Azienda Agricola Brunitta &#8212; Salento, Puglia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/pasta-artigianale-grano-senatore-cappelli-formati-brunitta-salento.jpg</image:loc>
+      <image:title>La pasta artigianale Brunitta</image:title>
+      <image:caption>I formati della pasta artigianale di grano Senatore Cappelli dell&#8217;Azienda Agricola Brunitta: paccheri, fusilli e troccoli trafilati al bronzo &#8212; Salento, Puglia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/olio-extravergine-oliva-brunitta-bottiglia-estratto-a-freddo-salento.jpg</image:loc>
+      <image:title>L&#8217;olio extravergine di oliva Brunitta</image:title>
+      <image:caption>La bottiglia di olio extravergine di oliva Brunitta, estratto a freddo con procedimenti meccanici in Salento</image:caption>
+    </image:image>
+</url>
   <url>
     <loc>https://caladeibalcani.it/blog.html</loc>
     <lastmod>2026-07-20</lastmod>
