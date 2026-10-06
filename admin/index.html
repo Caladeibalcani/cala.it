@@ -206,6 +206,11 @@ Lascia una riga vuota tra un paragrafo e l'altro.
 (function () {
   var API = '/.netlify/functions/admin';
   var pass = null, challenge = null, sChallenge = null, gallerie = null, sporco = false;
+  var SEGNAPOSTO = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="84" height="56">'
+    + '<rect width="84" height="56" fill="#eee"/>'
+    + '<text x="42" y="32" font-family="sans-serif" font-size="9" fill="#999" text-anchor="middle">in pubblicazione</text></svg>');
+
 
   function $(id) { return document.getElementById(id); }
   function msg(el, testo, tipo) { el.innerHTML = testo || ''; el.className = 'msg' + (testo ? ' ' + tipo : ''); }
@@ -325,7 +330,20 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     var riga = document.createElement('div');
     riga.className = 'foto-riga';
     var img = document.createElement('img');
-    img.src = '/' + f.j; img.loading = 'lazy';
+    img.loading = 'lazy'; img.alt = f.c || 'Foto della galleria';
+    // la foto appena caricata non e' ancora online: Netlify deve ancora ricostruire il sito.
+    // Finche' non c'e', si mostra l'immagine locale che abbiamo gia' in memoria.
+    img.src = f._a || '/' + f.j;
+    img.onerror = function () {
+      if (img.dataset.ritentato) {           // gia' ritentato: segnaposto, non icona rotta
+        img.onerror = null;
+        img.src = SEGNAPOSTO;
+        img.title = 'Anteprima non ancora disponibile: la foto sta andando online, un paio di minuti.';
+        return;
+      }
+      img.dataset.ritentato = '1';
+      setTimeout(function () { img.src = '/' + f.j + '?r=' + Date.now(); }, 20000);
+    };
     var cap = document.createElement('input');
     cap.type = 'text'; cap.value = f.c || ''; cap.placeholder = 'Didascalia (facoltativa)'; cap.maxLength = 200;
     cap.oninput = function () { f.c = cap.value; segnaSporco(); };
@@ -403,7 +421,7 @@ Lascia una riga vuota tra un paragrafo e l'altro.
           var f = inp.files[i];
           var img = await preparaImmagine(f);
           var r = await api('upload_image', { name: f.name.replace(/\.[^.]+$/, ''), jpg: img.jpg, webp: img.webp }, true);
-          gallerie.categorie[ci].foto.push({ w: r.w, j: r.j, c: '' });
+          gallerie.categorie[ci].foto.push({ w: r.w, j: r.j, c: '', _a: 'data:image/jpeg;base64,' + img.jpg });
         }
         segnaSporco(); disegnaGallerie();
         msg($('app-msg'), 'Foto caricate. Ora premi "Salva le modifiche" per pubblicarle.', 'ok');
@@ -412,10 +430,15 @@ Lascia una riga vuota tra un paragrafo e l'altro.
     inp.click();
   }
 
+  // le anteprime locali (base64) servono solo a schermo: nel file salvato sarebbero megabyte
+  function senzaAnteprime(g) {
+    return JSON.parse(JSON.stringify(g, function (k, v) { return k.charAt(0) === '_' ? undefined : v; }));
+  }
+
   $('btn-salva').onclick = async function () {
     $('btn-salva').disabled = true;
     try {
-      var r = await api('save_gallery', { gallerie: gallerie }, true);
+      var r = await api('save_gallery', { gallerie: senzaAnteprime(gallerie) }, true);
       sporco = false; $('salva-bar').classList.remove('attiva');
       msg($('app-msg'), r.note || 'Salvato.', 'ok');
     } catch (e) { msg($('app-msg'), e.message, 'err'); }
