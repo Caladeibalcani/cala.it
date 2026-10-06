@@ -101,7 +101,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap"></noscript>
   <link rel="preload" as="image" href="img/sposi-matrimonio-internazionale-cala-dei-balcani-salento-puglia.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.min.css?v=20260831">
+  <link rel="stylesheet" href="css/style.min.css?v=20261006">
   <style>
     .hero__tagline {
       font-family: var(--font-italic);
@@ -140,8 +140,8 @@
       border-radius: 4px;
       box-shadow: 0 8px 48px rgba(12,26,46,.18);
     }
-    .storybrand-photo-stack picture:last-child img,
-    .storybrand-photo-stack > img:last-child {
+    .storybrand-photo-stack picture:nth-child(2) img,
+    .storybrand-photo-stack > img:nth-child(2) {
       position: absolute;
       bottom: -28px;
       right: -28px;
@@ -151,8 +151,8 @@
       box-shadow: 0 8px 32px rgba(12,26,46,.22);
     }
     @media (max-width: 860px) {
-      .storybrand-photo-stack picture:last-child img,
-      .storybrand-photo-stack > img:last-child { display: none; }
+      .storybrand-photo-stack picture:nth-child(2) img,
+      .storybrand-photo-stack > img:nth-child(2) { display: none; }
     }
     .bivio-block {
       background: var(--navy);
@@ -263,7 +263,7 @@
           alt="Terrazza panoramica sul mare Adriatico per matrimoni di lusso — Cala dei Balcani, Santa Cesarea Terme, Salento" loading="lazy" width="600" height="200"
           style="width:100%;height:200px;object-fit:cover"></picture>
         <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column">
-          <h3 style="font-family:var(--font-display);color:var(--navy);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:.05em">LOCATION ESCLUSIVA</h3>
+          <h3 style="font-family:var(--font-head);color:var(--navy);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:.05em">LOCATION ESCLUSIVA</h3>
           <p style="color:var(--navy);opacity:.85;line-height:1.75;flex:1">Ospitiamo un solo evento al giorno e concediamo tutti gli spazi in esclusiva per l&#8217;intera giornata.</p>
           <a href="il-luogo.html" style="display:inline-block;margin-top:1.25rem;color:var(--navy);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--navy);padding-bottom:2px;text-decoration:none">Scopri la Location &rarr;</a>
         </div>
@@ -274,7 +274,7 @@
           alt="Cerimonia civile con arco floreale e vista sul mare Adriatico — location matrimoni Cala dei Balcani, Santa Cesarea Terme, Salento" loading="lazy" width="600" height="200"
           style="width:100%;height:200px;object-fit:cover"></picture>
         <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column">
-          <h3 style="font-family:var(--font-display);color:var(--navy);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:.05em">CERIMONIA CIVILE</h3>
+          <h3 style="font-family:var(--font-head);color:var(--navy);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:.05em">CERIMONIA CIVILE</h3>
           <p style="color:var(--navy);opacity:.85;line-height:1.75;flex:1">Cala &egrave; anche casa comunale e questo permette di poter celebrare la Cerimonia vista mare o sotto la Pineta.</p>
           <a href="matrimoni.html" style="display:inline-block;margin-top:1.25rem;color:var(--navy);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--navy);padding-bottom:2px;text-decoration:none">Clicca qui &rarr;</a>
         </div>
@@ -285,7 +285,7 @@
           alt="Vista aerea di Santa Cesarea Terme sul mare Adriatico — accommodation vicino alla location matrimoni Cala dei Balcani, Salento" loading="lazy" width="600" height="200"
           style="width:100%;height:200px;object-fit:cover"></picture>
         <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column">
-          <h3 style="font-family:var(--font-display);color:var(--navy);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:.05em">ACCOMMODATION</h3>
+          <h3 style="font-family:var(--font-head);color:var(--navy);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:.05em">ACCOMMODATION</h3>
           <p style="color:var(--navy);opacity:.85;line-height:1.75;flex:1">A pochi metri da Cala ci sono tante strutture ricettive dove puoi far soggiornare i tuoi ospiti. Hanno l&#8217;opportunit&agrave; di vivere l&#8217;esperienza in maniera comoda e rilassata.</p>
           <a href="accommodation.html" style="display:inline-block;margin-top:1.25rem;color:var(--navy);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--navy);padding-bottom:2px;text-decoration:none">Scopri le strutture &rarr;</a>
         </div>
@@ -309,8 +309,6 @@
       <div class="storybrand-photo-stack">
         <picture><source srcset="img/cala-dei-balcani-ristorante-per-matrimoni-santa-cesarea-terme-salento-lecce-puglia-1.webp" type="image/webp"><img src="img/cala-dei-balcani-ristorante-per-matrimoni-santa-cesarea-terme-salento-lecce-puglia-1.jpg"
           alt="Ristorante per matrimoni Cala dei Balcani — ricevimenti nuziali con vista mare, Santa Cesarea Terme, Salento, Puglia" loading="lazy" width="550" height="440"></picture>
-        <picture><source srcset="img/cala-dei-balcani-la-torre-saracena-di-santa-cesarea-terme-lecce-salento.webp" type="image/webp"><img src="img/cala-dei-balcani-la-torre-saracena-di-santa-cesarea-terme-lecce-salento.jpg"
-          alt="Torre Saracena di Monte Saracino del XVI secolo a Cala dei Balcani, Santa Cesarea Terme, Salento, Lecce" loading="lazy" width="230" height="185"></picture>
       </div>
     </div>
 
