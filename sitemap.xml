@@ -130,10 +130,6 @@
       <image:caption>Vista del mare Adriatico dalla location matrimoni Cala dei Balcani, Santa Cesarea Terme, Salento, Puglia</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://caladeibalcani.it/img/giardino-cala-dei-balcani-ristorante-per-matrimoni-location-matrimonio-salento-lecce-29.jpg</image:loc>
-      <image:caption>Giardino della Quercia di Cala dei Balcani per cerimonie all</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://caladeibalcani.it/img/terrazza-di-cala-dei-balcani-location-matrimoni-slaento-santa-cesarea-terme-lecce-16.jpg</image:loc>
       <image:caption>Terrazza di Cala dei Balcani con allestimento matrimonio — Santa Cesarea Terme, Salento, Lecce, Puglia</image:caption>
     </image:image>
@@ -162,7 +158,12 @@
       <image:loc>https://caladeibalcani.it/img/cala-dei-balcani-sala-interna-ristorante-per-ricevimenti-location-eventi-lecce-salento-.jpg</image:loc>
       <image:caption>Sala interna del ristorante Cala dei Balcani per ricevimenti nuziali, Lecce, Salento, Puglia</image:caption>
     </image:image>
-  </url>
+      <image:image>
+      <image:loc>https://caladeibalcani.it/img/sposi-scalinata-pietra-giardino-mediterraneo-cala-dei-balcani-salento.jpg</image:loc>
+      <image:title>Gli sposi scendono la scalinata in pietra del giardino mediterraneo, tra lecci, pini e piante della macchia</image:title>
+      <image:caption>Gli sposi scendono la scalinata in pietra del giardino mediterraneo, tra lecci, pini e piante della macchia &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
+    </image:image>
+</url>
   <url>
     <loc>https://caladeibalcani.it/matrimoni.html</loc>
     <lastmod>2026-07-20</lastmod>
@@ -273,10 +274,6 @@
       <image:caption>Terrazza con Torre Saracena per matrimoni di lusso — Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://caladeibalcani.it/img/la-torre-di-cala-dei-balcani-santa-cesarea-terme-ristorante-per-matrimoni-e-ricevimenti-salento-lecce-puglia-italia-2terrazza-panoramica-matrimoni-mare-adriatico-cala-dei-balcani-salento.jpg</image:loc>
-      <image:caption>Torre Saracena e sala ristorante per matrimoni Cala dei Balcani, Santa Cesarea Terme, Lecce, Salento</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://caladeibalcani.it/img/la-torre-di-cala-dei-balcani-santa-cesare-aterme-lecce-salento-2.jpg</image:loc>
       <image:caption>Torre Saracena di Monte Saracino del XVI secolo — Cala dei Balcani, Santa Cesarea Terme, Salento, Lecce</image:caption>
     </image:image>
@@ -285,7 +282,22 @@
       <image:title>Le montagne dei Balcani all&#8217;orizzonte</image:title>
       <image:caption>Le cime innevate dei Balcani all&#8217;orizzonte sul mare Adriatico, visibili da Cala dei Balcani nelle giornate limpide &#8212; Santa Cesarea Terme, Salento</image:caption>
     </image:image>
-  </url>
+      <image:image>
+      <image:loc>https://caladeibalcani.it/img/torre-saracena-rudere-vista-mare-adriatico-cala-dei-balcani-santa-cesarea-terme.jpg</image:loc>
+      <image:title>La Torre Saracena del XVI secolo che domina il mare Adriatico, sentinella contro incursioni e mareggiate</image:title>
+      <image:caption>La Torre Saracena del XVI secolo che domina il mare Adriatico, sentinella contro incursioni e mareggiate &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/torre-saracena-aragonese-sposi-ballano-cala-dei-balcani-santa-cesarea-terme-salento.jpg</image:loc>
+      <image:title>La Torre Saracena di origine aragonese, realizzata tra il &#8217;400 e il &#8217;500, con gli sposi che ballano ai suoi piedi</image:title>
+      <image:caption>La Torre Saracena di origine aragonese, realizzata tra il &#8217;400 e il &#8217;500, con gli sposi che ballano ai suoi piedi &#8212; Cala dei Balcani, Salento</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/mura-in-pietra-torre-saracena-ospiti-matrimonio-cala-dei-balcani-salento.jpg</image:loc>
+      <image:title>Le mura in pietra della Torre Saracena e gli ospiti di un matrimonio riuniti ai suoi piedi</image:title>
+      <image:caption>Le mura in pietra della Torre Saracena e gli ospiti di un matrimonio riuniti ai suoi piedi &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
+    </image:image>
+</url>
   <url>
     <loc>https://caladeibalcani.it/cucina.html</loc>
     <lastmod>2026-07-20</lastmod>
