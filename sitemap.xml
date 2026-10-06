@@ -921,7 +921,32 @@
       <image:loc>https://caladeibalcani.it/img/santa-cesarea-terme-vista-aerea-accommodation-cala-dei-balcani.jpg</image:loc>
       <image:caption>Vista aerea di Santa Cesarea Terme sul mare Adriatico — accommodation vicino alla location matrimoni Cala dei Balcani, Salento</image:caption>
     </image:image>
-  </url>
+      <image:image>
+      <image:loc>https://caladeibalcani.it/img/castro-marina-lungomare-palme-salento.jpg</image:loc>
+      <image:title>Castro nel Salento</image:title>
+      <image:caption>Il lungomare di Castro Marina con le palme e il porto &#8212; borgo del Salento a circa 10 minuti da Cala dei Balcani</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/otranto-centro-storico-mare-turchese-salento.jpg</image:loc>
+      <image:title>Otranto nel Salento</image:title>
+      <image:caption>Il centro storico di Otranto affacciato sul mare turchese &#8212; a circa 25 minuti da Cala dei Balcani, Salento</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/santa-maria-di-leuca-faro-finibus-terrae-salento.jpg</image:loc>
+      <image:title>Santa Maria di Leuca nel Salento</image:title>
+      <image:caption>Il faro di Santa Maria di Leuca, dove l&#8217;Adriatico incontra lo Ionio &#8212; a circa 45 minuti da Cala dei Balcani</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/lecce-basilica-santa-croce-barocco-salento.jpg</image:loc>
+      <image:title>Lecce nel Salento</image:title>
+      <image:caption>Il barocco leccese della Basilica di Santa Croce a Lecce &#8212; a circa un&#8217;ora da Cala dei Balcani, Salento</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/gallipoli-centro-storico-spiaggia-purita-salento.jpg</image:loc>
+      <image:title>Gallipoli nel Salento</image:title>
+      <image:caption>Il centro storico di Gallipoli sulla spiaggia della Purit&#224; &#8212; costa ionica del Salento</image:caption>
+    </image:image>
+</url>
   <url>
     <loc>https://caladeibalcani.it/rivivi-il-tuo-si.html</loc>
     <lastmod>2026-09-29</lastmod>
