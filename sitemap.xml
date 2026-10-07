@@ -1310,6 +1310,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/matrimoni-internazionali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/international-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/mariages-internationaux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/bodas-internacionales.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/internationale-hochzeiten.html"/>
     <image:image>
       <image:loc>https://caladeibalcani.it/img/INTERNATIONAL-AND-COZY-WEDDING-cala-dei-balcani-santa-cesarea-terme-lecce-salento-puglia-italia-2.jpg</image:loc>
       <image:caption>Matrimonio internazionale intimo ed elegante a Cala dei Balcani, Santa Cesarea Terme, Salento, Puglia</image:caption>
@@ -1390,6 +1394,50 @@
       <image:caption>Gli sposi abbracciati sotto il pino secolare, con la costa e il mare Adriatico alle spalle &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
     </image:image>
 </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/international-weddings.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/matrimoni-internazionali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/international-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/mariages-internationaux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/bodas-internacionales.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/internationale-hochzeiten.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/mariages-internationaux.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/matrimoni-internazionali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/international-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/mariages-internationaux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/bodas-internacionales.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/internationale-hochzeiten.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/bodas-internacionales.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/matrimoni-internazionali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/international-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/mariages-internationaux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/bodas-internacionales.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/internationale-hochzeiten.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/internationale-hochzeiten.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/matrimoni-internazionali.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/international-weddings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/mariages-internationaux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/bodas-internacionales.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/internationale-hochzeiten.html"/>
+  </url>
   <url>
     <loc>https://caladeibalcani.it/azienda-agricola.html</loc>
     <lastmod>2026-07-20</lastmod>

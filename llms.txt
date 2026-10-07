@@ -73,6 +73,11 @@ The website is available in 5 languages:
 - Contact: https://caladeibalcani.it/contatti.html
 - Blog: https://caladeibalcani.it/blog.html
 - Salento guide: https://caladeibalcani.it/salento.html
+- International weddings (Italian): https://caladeibalcani.it/matrimoni-internazionali.html
+- International weddings (English): https://caladeibalcani.it/en/international-weddings.html
+- International weddings (French): https://caladeibalcani.it/fr/mariages-internationaux.html
+- International weddings (Spanish): https://caladeibalcani.it/es/bodas-internacionales.html
+- International weddings (German): https://caladeibalcani.it/de/internationale-hochzeiten.html
 
 ## Sitemap
 
