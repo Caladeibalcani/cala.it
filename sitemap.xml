@@ -931,7 +931,54 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/testimonianze.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/testimonianze.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/testimonials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/temoignages.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/testimonios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/referenzen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/testimonials.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/testimonianze.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/testimonials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/temoignages.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/testimonios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/referenzen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/temoignages.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/testimonianze.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/testimonials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/temoignages.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/testimonios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/referenzen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/testimonios.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/testimonianze.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/testimonials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/temoignages.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/testimonios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/referenzen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/referenzen.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/testimonianze.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/testimonials.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/temoignages.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/testimonios.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/referenzen.html"/>
   </url>
   <url>
     <loc>https://caladeibalcani.it/salento.html</loc>
@@ -939,7 +986,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/salento.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/salento.html"/>
     <image:image>
       <image:loc>https://caladeibalcani.it/img/cala-dei-balcani-location-matrimoni-wedding-salento-santa-cesarea-terme-lecce-1.jpg</image:loc>
       <image:caption>Terrazza panoramica sul mare Adriatico — location matrimoni esclusiva Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
@@ -988,11 +1038,59 @@
     </image:image>
 </url>
   <url>
+    <loc>https://caladeibalcani.it/en/salento.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/salento.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/salento.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/salento.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/salento.html"/>
+  </url>
+  <url>
     <loc>https://caladeibalcani.it/rivivi-il-tuo-si.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/rivivi-il-tuo-si.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/vow-renewal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/renouvellement-des-voeux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/renovacion-de-votos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/eheversprechen-erneuern.html"/>
     <image:image>
       <image:loc>https://caladeibalcani.it/img/video-rivivi-il-tuo-si-cala-dei-balcani-copertina.jpg</image:loc>
       <image:title>Rivivi il tuo Sì — il video della serata a Cala dei Balcani</image:title>
@@ -1305,6 +1403,50 @@
     </image:image>
   </url>
   <url>
+    <loc>https://caladeibalcani.it/en/vow-renewal.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/rivivi-il-tuo-si.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/vow-renewal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/renouvellement-des-voeux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/renovacion-de-votos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/eheversprechen-erneuern.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/renouvellement-des-voeux.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/rivivi-il-tuo-si.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/vow-renewal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/renouvellement-des-voeux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/renovacion-de-votos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/eheversprechen-erneuern.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/renovacion-de-votos.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/rivivi-il-tuo-si.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/vow-renewal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/renouvellement-des-voeux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/renovacion-de-votos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/eheversprechen-erneuern.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/eheversprechen-erneuern.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/rivivi-il-tuo-si.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/vow-renewal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/renouvellement-des-voeux.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/renovacion-de-votos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/eheversprechen-erneuern.html"/>
+  </url>
+  <url>
     <loc>https://caladeibalcani.it/matrimoni-internazionali.html</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1444,6 +1586,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/azienda-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/farm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/exploitation-agricole.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/finca-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/landwirtschaft.html"/>
       <image:image>
       <image:loc>https://caladeibalcani.it/img/spighe-grano-senatore-cappelli-maturo-azienda-agricola-brunitta-salento.jpg</image:loc>
       <image:title>Le spighe di grano Senatore Cappelli</image:title>
@@ -1460,6 +1606,50 @@
       <image:caption>La bottiglia di olio extravergine di oliva Brunitta, estratto a freddo con procedimenti meccanici in Salento</image:caption>
     </image:image>
 </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/farm.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/azienda-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/farm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/exploitation-agricole.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/finca-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/landwirtschaft.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/exploitation-agricole.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/azienda-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/farm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/exploitation-agricole.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/finca-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/landwirtschaft.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/finca-agricola.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/azienda-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/farm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/exploitation-agricole.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/finca-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/landwirtschaft.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/landwirtschaft.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/azienda-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/farm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/exploitation-agricole.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/finca-agricola.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/landwirtschaft.html"/>
+  </url>
   <url>
     <loc>https://caladeibalcani.it/blog.html</loc>
     <lastmod>2026-07-20</lastmod>

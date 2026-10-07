@@ -83,6 +83,10 @@ The website is available in 5 languages:
 - Accommodation for guests (French): https://caladeibalcani.it/fr/hebergement.html
 - Accommodation for guests (Spanish): https://caladeibalcani.it/es/alojamiento.html
 - Accommodation for guests (German): https://caladeibalcani.it/de/unterkuenfte.html
+- Real couples / reviews (5 languages): https://caladeibalcani.it/testimonianze.html | https://caladeibalcani.it/en/testimonials.html | https://caladeibalcani.it/fr/temoignages.html | https://caladeibalcani.it/es/testimonios.html | https://caladeibalcani.it/de/referenzen.html
+- Salento guide (5 languages): https://caladeibalcani.it/salento.html | https://caladeibalcani.it/en/salento.html | https://caladeibalcani.it/fr/salento.html | https://caladeibalcani.it/es/salento.html | https://caladeibalcani.it/de/salento.html
+- Brunitta farm (5 languages): https://caladeibalcani.it/azienda-agricola.html | https://caladeibalcani.it/en/farm.html | https://caladeibalcani.it/fr/exploitation-agricole.html | https://caladeibalcani.it/es/finca-agricola.html | https://caladeibalcani.it/de/landwirtschaft.html
+- Vow renewal event (5 languages): https://caladeibalcani.it/rivivi-il-tuo-si.html | https://caladeibalcani.it/en/vow-renewal.html | https://caladeibalcani.it/fr/renouvellement-des-voeux.html | https://caladeibalcani.it/es/renovacion-de-votos.html | https://caladeibalcani.it/de/eheversprechen-erneuern.html
 
 ## Sitemap
 
