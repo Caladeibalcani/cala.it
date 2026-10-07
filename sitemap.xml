@@ -207,10 +207,6 @@
       <image:caption>Matrimonio sul mare Adriatico alla location esclusiva Cala dei Balcani — Santa Cesarea Terme, Salento, Puglia</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://caladeibalcani.it/img/wedding-location-santa-ceasrea-terme-salento-lecce-matrimoni-al-mare-puglia-9.jpg</image:loc>
-      <image:caption>Sposi durante cerimonia con vista mare Adriatico — wedding location Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://caladeibalcani.it/img/matrimonio-civile-cala-dei-balcani-santa-cesarea-terme-salento.jpg</image:loc>
       <image:caption>Matrimonio civile in riva al mare Adriatico a Cala dei Balcani, Santa Cesarea Terme, Salento, Puglia</image:caption>
     </image:image>
@@ -238,6 +234,16 @@
       <image:loc>https://caladeibalcani.it/img/buffet-crudi-di-mare-antipasti-allestimento-floreale-cala-dei-balcani-salento.jpg</image:loc>
       <image:title>Il buffet di crudi di mare e antipasti allestito davanti alla parete di roccia, tra alte composizioni floreali</image:title>
       <image:caption>Il buffet di crudi di mare e antipasti allestito davanti alla parete di roccia, tra alte composizioni floreali &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/allestimento-cerimonia-arco-floreale-sedie-bianche-vista-mare-cala-dei-balcani-salento.jpg</image:loc>
+      <image:title>Allestimento della cerimonia sul prato vista mare, con arco floreale e sedie bianche pronte per gli ospiti</image:title>
+      <image:caption>Allestimento della cerimonia sul prato vista mare, con arco floreale e sedie bianche pronte per gli ospiti &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://caladeibalcani.it/img/vista-aerea-costa-santa-cesarea-terme-torre-mare-adriatico-cala-dei-balcani.jpg</image:loc>
+      <image:title>Vista aerea della costa di Santa Cesarea Terme con la torre e il mare Adriatico</image:title>
+      <image:caption>Vista aerea della costa di Santa Cesarea Terme con la torre e il mare Adriatico &#8212; Cala dei Balcani, Salento, Puglia</image:caption>
     </image:image>
 </url>
   <url>
@@ -395,7 +401,12 @@
       <image:loc>https://caladeibalcani.it/img/cucina-piatti-ristorazione-cala-dei-balcani-santa-cesarea-terme-lecce-salento-puglia-italia-7.jpg</image:loc>
       <image:caption>Alta gastronomia salentina per banchetti nuziali a Cala dei Balcani, Santa Cesarea Terme, Lecce, Salento</image:caption>
     </image:image>
-  </url>
+      <image:image>
+      <image:loc>https://caladeibalcani.it/img/buffet-servizio-terrazza-tramonto-chef-cala-dei-balcani-santa-cesarea-terme-salento.jpg</image:loc>
+      <image:title>Il servizio al buffet sulla terrazza al tramonto, con lo chef e la brigata di sala e il mare Adriatico sullo sfondo</image:title>
+      <image:caption>Il servizio al buffet sulla terrazza al tramonto, con lo chef e la brigata di sala e il mare Adriatico sullo sfondo &#8212; Cala dei Balcani, Santa Cesarea Terme, Salento</image:caption>
+    </image:image>
+</url>
   <url>
     <loc>https://caladeibalcani.it/galleria.html</loc>
     <lastmod>2026-10-06</lastmod>
