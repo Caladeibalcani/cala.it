@@ -1656,6 +1656,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog.html"/>
     <image:image>
       <image:loc>https://caladeibalcani.it/img/sposi-internazionali-wedding-cala-dei-balcani-salento.jpg</image:loc>
       <image:caption>Matrimonio al tramonto sul mare Adriatico a Cala dei Balcani, Salento</image:caption>
@@ -1668,6 +1672,50 @@
       <image:loc>https://caladeibalcani.it/img/cerimonia-nuziale-arco-floreale-terrazza-cala-dei-balcani-salento.webp</image:loc>
       <image:caption>Piatti della cucina salentina serviti durante un matrimonio a Cala dei Balcani</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/blog.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/blog.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/blog.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/blog.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog.html"/>
   </url>
   <url>
     <loc>https://caladeibalcani.it/accommodation.html</loc>
@@ -3425,7 +3473,54 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/midweek-wedding-date-puglia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-en-semaine-pouilles.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-entre-semana-apulia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-unter-der-woche-apulien.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/blog/midweek-wedding-date-puglia.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/midweek-wedding-date-puglia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-en-semaine-pouilles.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-entre-semana-apulia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-unter-der-woche-apulien.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/blog/mariage-en-semaine-pouilles.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/midweek-wedding-date-puglia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-en-semaine-pouilles.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-entre-semana-apulia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-unter-der-woche-apulien.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/blog/boda-entre-semana-apulia.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/midweek-wedding-date-puglia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-en-semaine-pouilles.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-entre-semana-apulia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-unter-der-woche-apulien.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/blog/hochzeit-unter-der-woche-apulien.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-destination-puglia-data-infrasettimanale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/midweek-wedding-date-puglia.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-en-semaine-pouilles.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-entre-semana-apulia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-unter-der-woche-apulien.html"/>
   </url>
   <url>
     <loc>https://caladeibalcani.it/blog/matrimonio-pochi-invitati-semplicita.html</loc>
@@ -3441,7 +3536,54 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/planning-a-wedding-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/organiser-son-mariage-a-distance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/organizar-la-boda-a-distancia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-aus-der-ferne-planen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/blog/planning-a-wedding-from-abroad.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/planning-a-wedding-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/organiser-son-mariage-a-distance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/organizar-la-boda-a-distancia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-aus-der-ferne-planen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/blog/organiser-son-mariage-a-distance.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/planning-a-wedding-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/organiser-son-mariage-a-distance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/organizar-la-boda-a-distancia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-aus-der-ferne-planen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/blog/organizar-la-boda-a-distancia.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/planning-a-wedding-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/organiser-son-mariage-a-distance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/organizar-la-boda-a-distancia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-aus-der-ferne-planen.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/blog/hochzeit-aus-der-ferne-planen.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-distanza-salento-cristina-matteo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/planning-a-wedding-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/organiser-son-mariage-a-distance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/organizar-la-boda-a-distancia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/hochzeit-aus-der-ferne-planen.html"/>
   </url>
 
   <!-- ══ BLOG ARTICOLI (IT) — Batch 2 ══ -->
@@ -3459,7 +3601,54 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-indiano-salento.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/matrimonio-indiano-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/indian-wedding-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-indien-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-india-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/indische-hochzeit-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/blog/indian-wedding-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-indiano-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/indian-wedding-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-indien-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-india-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/indische-hochzeit-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/blog/mariage-indien-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-indiano-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/indian-wedding-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-indien-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-india-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/indische-hochzeit-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/blog/boda-india-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-indiano-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/indian-wedding-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-indien-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-india-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/indische-hochzeit-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/blog/indische-hochzeit-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/matrimonio-indiano-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/indian-wedding-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/mariage-indien-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/boda-india-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/indische-hochzeit-salento.html"/>
   </url>
   <url>
     <loc>https://caladeibalcani.it/blog/matrimonio-salento-famiglia-dialogo.html</loc>
@@ -3502,7 +3691,54 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/sposarsi-sul-mare-del-salento.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caladeibalcani.it/blog/sposarsi-sul-mare-del-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/getting-married-by-the-sea-in-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/se-marier-face-a-la-mer-dans-le-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/casarse-frente-al-mar-en-el-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/am-meer-heiraten-im-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/blog/getting-married-by-the-sea-in-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/sposarsi-sul-mare-del-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/getting-married-by-the-sea-in-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/se-marier-face-a-la-mer-dans-le-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/casarse-frente-al-mar-en-el-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/am-meer-heiraten-im-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/blog/se-marier-face-a-la-mer-dans-le-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/sposarsi-sul-mare-del-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/getting-married-by-the-sea-in-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/se-marier-face-a-la-mer-dans-le-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/casarse-frente-al-mar-en-el-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/am-meer-heiraten-im-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/blog/casarse-frente-al-mar-en-el-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/sposarsi-sul-mare-del-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/getting-married-by-the-sea-in-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/se-marier-face-a-la-mer-dans-le-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/casarse-frente-al-mar-en-el-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/am-meer-heiraten-im-salento.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/blog/am-meer-heiraten-im-salento.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/blog/sposarsi-sul-mare-del-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/blog/getting-married-by-the-sea-in-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/blog/se-marier-face-a-la-mer-dans-le-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/blog/casarse-frente-al-mar-en-el-salento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/blog/am-meer-heiraten-im-salento.html"/>
   </url>
 
 </urlset>
