@@ -78,6 +78,11 @@ The website is available in 5 languages:
 - International weddings (French): https://caladeibalcani.it/fr/mariages-internationaux.html
 - International weddings (Spanish): https://caladeibalcani.it/es/bodas-internacionales.html
 - International weddings (German): https://caladeibalcani.it/de/internationale-hochzeiten.html
+- Accommodation for guests (Italian): https://caladeibalcani.it/accommodation.html
+- Accommodation for guests (English): https://caladeibalcani.it/en/accommodation.html
+- Accommodation for guests (French): https://caladeibalcani.it/fr/hebergement.html
+- Accommodation for guests (Spanish): https://caladeibalcani.it/es/alojamiento.html
+- Accommodation for guests (German): https://caladeibalcani.it/de/unterkuenfte.html
 
 ## Sitemap
 

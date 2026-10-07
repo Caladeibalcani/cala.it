@@ -1485,6 +1485,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/hebergement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/alojamiento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/unterkuenfte.html"/>
     <image:image>
       <image:loc>https://caladeibalcani.it/img/panoramica-notturna-costa-salentina-cala-dei-balcani.jpg</image:loc>
       <image:caption>Santa Cesarea Terme vista dal mare</image:caption>
@@ -1497,6 +1501,50 @@
       <image:loc>https://caladeibalcani.it/img/campo-grano-azienda-agricola-la-brunitta-cala-dei-balcani-salento.jpg</image:loc>
       <image:caption>Vista aerea Santa Cesarea Terme</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/en/accommodation.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/hebergement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/alojamiento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/unterkuenfte.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/fr/hebergement.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/hebergement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/alojamiento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/unterkuenfte.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/es/alojamiento.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/hebergement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/alojamiento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/unterkuenfte.html"/>
+  </url>
+  <url>
+    <loc>https://caladeibalcani.it/de/unterkuenfte.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://caladeibalcani.it/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caladeibalcani.it/en/accommodation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caladeibalcani.it/fr/hebergement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caladeibalcani.it/es/alojamiento.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://caladeibalcani.it/de/unterkuenfte.html"/>
   </url>
   <url>
     <loc>https://caladeibalcani.it/privacy.html</loc>
